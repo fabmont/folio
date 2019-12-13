@@ -28,11 +28,13 @@ export const ProfileImage = styled.img.attrs({ src: Me })`
 
 export const Title = styled.span`
   font-weight: 800;
-  font-size: 50px;
+  font-size: 40px;
   color: white;
+  padding: 0 30px;
 `;
 
 export const Subtitle = styled.span`
   font-size: 18px;
   color: #a9a9a9;
+  padding: 0 30px;
 `;

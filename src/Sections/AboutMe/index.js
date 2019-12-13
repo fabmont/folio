@@ -11,7 +11,7 @@ export default function AboutMe() {
     <Container>
       <Title>Projetos</Title>
       <br />
-      <VerticalTimeline layout="1-column">
+      <VerticalTimeline layout="1-column" animate={false}>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: baloonBlue, color: '#fff' }}
