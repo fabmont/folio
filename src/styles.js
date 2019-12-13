@@ -25,6 +25,16 @@ export const StaticBottomPanel = styled.div`
   }
 `;
 
+export const BottomButtonsHolder = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+  background-color: #000000;
+  opacity: 0.75;
+  border-radius: 100px;
+  box-shadow: 0 0 6px #2b2b28;
+`;
+
 export const BottomButtons = styled.button`
   padding: 6px 14px;
   color: white;

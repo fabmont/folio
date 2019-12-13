@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   min-height: 100vh;
   width: 100%;
-  background-color: #315b96;
+  background-color: #5eb7b7;
   font-family: 'Open Sans';
   display: flex;
   flex-direction: column;
@@ -19,9 +19,4 @@ export const Title = styled.span`
   @media (max-width: 425px) {
     margin-left: 25px;
   }
-`;
-
-export const Paragraph = styled.span`
-  color: lightgray;
-  text-align: justify;
 `;

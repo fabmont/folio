@@ -1,17 +1,19 @@
 import React from 'react';
 import { Instagram, Linkedin, Facebook, GitHub } from 'react-feather';
-import { StaticBottomPanel, MainContainer, BottomButtons } from './styles';
+import { StaticBottomPanel, MainContainer, BottomButtons, BottomButtonsHolder } from './styles';
 import GettingStarted from './Sections/GettingStarted';
 import AboutMe from './Sections/AboutMe';
+import ContactMe from './Sections/ContactMe';
 
 export default function App() {
   return (
     <MainContainer>
       <GettingStarted />
       <AboutMe />
+      <ContactMe />
       <StaticBottomPanel>
         <div />
-        <div>
+        <BottomButtonsHolder>
           <BottomButtons>
             <Linkedin size="25" />
           </BottomButtons>
@@ -24,7 +26,7 @@ export default function App() {
           <BottomButtons>
             <Facebook size="25" />
           </BottomButtons>
-        </div>
+        </BottomButtonsHolder>
       </StaticBottomPanel>
     </MainContainer>
   );
