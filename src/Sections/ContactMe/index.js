@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, Phone, Map } from 'react-feather';
-import { Container, Title, Image, InfoContainer, InfoCard, ImageContainer, Row } from './styles';
+import { Container, Title, Image, InfoContainer, InfoCard, Row } from './styles';
 
 export default function ContactMe() {
   return (
