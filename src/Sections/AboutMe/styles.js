@@ -15,7 +15,6 @@ export const Title = styled.span`
   font-size: 50px;
   margin-top: 50px;
   margin-left: 100px;
-  text-shadow: 0 0 8px #2b2b28;
   @media (max-width: 425px) {
     margin-left: 25px;
   }
