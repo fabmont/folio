@@ -28,11 +28,13 @@ export const InfoContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   padding: 50px;
+  margin-bottom: 50px;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 80px;
   }
 `;
 
@@ -56,7 +58,6 @@ export const InfoCard = styled.div`
   @media (max-width: 768px) {
     order: 1;
     width: 100%;
-    margin-bottom: 100px;
   }
 `;
 
