@@ -11,11 +11,11 @@ export const StaticBottomPanel = styled.div`
   right: 0;
   left: 0;
   margin: 0 30px;
-  padding: 18px;
+  padding: 18px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-family: 'Open Sans';
 
   @media (max-width: 425px) {
