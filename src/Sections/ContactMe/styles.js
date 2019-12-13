@@ -16,6 +16,7 @@ export const Title = styled.span`
   font-size: 50px;
   margin-top: 50px;
   margin-left: 100px;
+
   @media (max-width: 425px) {
     margin-left: 25px;
   }
@@ -27,6 +28,7 @@ export const InfoContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   padding: 50px;
+
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -35,7 +37,7 @@ export const InfoContainer = styled.div`
 `;
 
 export const InfoCard = styled.div`
-  padding: 20px;
+  padding: 40px;
   border-radius: 4px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   width: 40%;
@@ -73,6 +75,7 @@ export const ImageContainer = styled.div`
 export const Image = styled.img.attrs({ src: img })`
   height: 400px;
   width: 400px;
+
   @media (max-width: 768px) {
     order: 0;
     height: 250px;
