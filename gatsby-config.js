@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Fabricio Monteiro`,
+    title: `fabmont`,
     description: `This is my web page and blog, feel free to interact with me =)`,
-    author: `@fabmont`,
+    author: `@fabmont`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,8 +10,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -24,8 +24,8 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
+      }
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
@@ -33,14 +33,14 @@ module.exports = {
         fonts: [
           {
             family: `Open Sans`,
-            variants: [`400`, `700`],
+            variants: [`400`, `700`]
           },
           {
             family: `Share Tech Mono`,
-            variants: [`400`],
-          },
-        ],
-      },
-    },
-  ],
+            variants: [`400`]
+          }
+        ]
+      }
+    }
+  ]
 };

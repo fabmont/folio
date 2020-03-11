@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -6,6 +6,10 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 export const Photo = styled.div`
@@ -17,22 +21,31 @@ export const Photo = styled.div`
   box-shadow: -10px 10px 0 ${({ theme }) => theme.primaryColor};
   border: 3px solid ${({ theme }) => theme.primaryColor};
   margin-right: 50px;
+
+  @media (max-width: 425px) {
+    margin-right: 0;
+  }
 `;
 
 export const BodyHolder = styled.div`
   width: 30%;
+
+  @media (max-width: 425px) {
+    width: 80%;
+    text-align: center;
+  }
 `;
 
 export const Title = styled.h1`
   font-size: 38px;
   font-weight: 700;
+  font-family: "Share Tech Mono";
   color: ${({ theme }) => theme.primaryColor};
 `;
 
 export const TextBody = styled.span`
   max-width: 100px;
-  font-family: 'Share Tech Mono';
-  font-weight: 400;
+  font-family: "Share Tech Mono";
   color: ${({ theme }) => theme.textColor};
 
   b {

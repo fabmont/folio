@@ -1,12 +1,14 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import Layout from '../components/layout';
-import { Container, Photo, Title, TextBody, BodyHolder } from '../pageStyles';
+import React from "react";
+import Helmet from "react-helmet";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import { Container, Photo, Title, TextBody, BodyHolder } from "../pageStyles";
 
 export default function IndexPage() {
   return (
     <Layout>
       <Container>
+        <SEO title="Home" />
         <Helmet>
           <link
             href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
@@ -17,7 +19,7 @@ export default function IndexPage() {
         <BodyHolder>
           <Title>Hey!</Title>
           <TextBody>
-            I'm <b>Fabrício Monteiro</b> and I'm a systems analyst and a
+            My name is <b>Fabrício Monteiro</b> and I'm a systems analyst and a
             web/mobile developer.
             <br />
             I've built this web page to share my interests and some projects I'm

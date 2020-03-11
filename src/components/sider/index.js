@@ -1,7 +1,8 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import { GitHub, Linkedin, Instagram } from 'react-feather';
-import { Container, NavMenu, IconsHolder } from './styles';
+import React from "react";
+import { Link } from "gatsby";
+import { GitHub, Linkedin, Instagram } from "react-feather";
+import { Container, NavMenu, IconsHolder } from "./styles";
+import { github, linkedin, instagram } from "../../constants/socialNetworks";
 
 export default function Sider() {
   return (
@@ -25,14 +26,14 @@ export default function Sider() {
           </li>
           <li>
             <IconsHolder>
-              <a href="https://github.com/fabmont" className="link-icon">
-                <GitHub />
+              <a href={github} className="link-icon">
+                <GitHub size={35} />
               </a>
-              <a href="https://github.com/fabmont" className="link-icon">
-                <Linkedin />
+              <a href={linkedin} className="link-icon">
+                <Linkedin size={35} />
               </a>
-              <a href="https://github.com/fabmont" className="link-icon">
-                <Instagram />
+              <a href={instagram} className="link-icon">
+                <Instagram size={35} />
               </a>
             </IconsHolder>
           </li>

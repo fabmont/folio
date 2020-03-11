@@ -1,24 +1,21 @@
-import styled from 'styled-components';
-import { darken } from 'polished';
+import styled from "styled-components";
+import { lighten } from "polished";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  background-color: ${darken(0.09, '#000')};
+  background-color: ${({ theme }) => theme.componentBackground};
   color: white;
   z-index: 100;
-
-  @media (max-width: 425px) {
-    padding: 0;
-  }
 `;
 
 export const NavMenu = styled.nav`
   ol {
     bottom: 0;
-    font-weight: 700;
+    font-family: "Share Tech Mono";
+    font-weight: bold;
     list-style: none;
   }
 
@@ -57,7 +54,6 @@ export const IconsHolder = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
 
   .link-icon {
     color: white;
@@ -67,7 +63,7 @@ export const IconsHolder = styled.div`
     }
 
     &:not(:last-child) {
-      margin-right: 12px;
+      margin-right: 30px;
     }
   }
 `;

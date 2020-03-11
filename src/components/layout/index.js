@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { ThemeProvider } from 'styled-components';
-import { Container, GlobalStyles, PageContent } from './styles';
-import theme from '../../constants/theme';
-import Sider from '../sider';
+import React from "react";
+import PropTypes from "prop-types";
+import { ThemeProvider } from "styled-components";
+import { Container, GlobalStyles, PageContent } from "./styles";
+import theme from "../../constants/theme";
+import Sider from "../sider";
 
 export default function Layout({ children }) {
-  const { light } = theme;
+  const { dark } = theme;
 
   return (
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={dark}>
       <Container>
         <GlobalStyles />
         <Sider />
@@ -20,5 +20,5 @@ export default function Layout({ children }) {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
