@@ -1,7 +1,18 @@
 import React from "react";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
-import { Container, Title, BodyText, Card } from '../../pageStyles/projects';
+import {
+  Container,
+  Title,
+  BodyText,
+  Card,
+  ThumbImg,
+  CardContent,
+  CardTitle,
+  IconsHolder,
+  CardDescription
+} from "../../pageStyles/projects";
+import projects from "../../constants/projects";
 
 export default function Projects() {
   return (
@@ -16,7 +27,22 @@ export default function Projects() {
         </BodyText>
         <br />
         <br />
-        <Card></Card>
+        {projects.map(card => (
+          <Card>
+            <ThumbImg src={card.thumb} />
+            <CardContent>
+              <div>
+                <CardTitle>{card.name}</CardTitle>
+                <br />
+                <br />
+                <CardDescription>{card.description}</CardDescription>
+              </div>
+              <br />
+              <br />
+              <IconsHolder>{card.techs.map(icon => icon)}</IconsHolder>
+            </CardContent>
+          </Card>
+        ))}
       </Container>
     </Layout>
   );
