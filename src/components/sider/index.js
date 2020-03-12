@@ -21,19 +21,19 @@ export default function Sider() {
           </li>
           <li>
             <Link activeClassName="link-active" className="link" to="/contacts">
-              Contacts
+              Contact
             </Link>
           </li>
           <li>
             <IconsHolder>
               <a href={github} className="link-icon">
-                <GitHub size={35} />
+                <GitHub size={35} id="nav-icon" />
               </a>
               <a href={linkedin} className="link-icon">
-                <Linkedin size={35} />
+                <Linkedin size={35} id="nav-icon" />
               </a>
               <a href={instagram} className="link-icon">
-                <Instagram size={35} />
+                <Instagram size={35} id="nav-icon" />
               </a>
             </IconsHolder>
           </li>

@@ -16,11 +16,11 @@ export const Container = styled.div`
 `;
 
 export const PageContent = styled.div`
-  margin-top: 5rem;
-  padding: 0 30px;
+  padding: 10%;
 
   @media (max-width: 425px) {
-    padding: 0 16px;
+    margin-top: 5rem;
+    padding: 0 16px 16px 16px;
   }
 `;
 

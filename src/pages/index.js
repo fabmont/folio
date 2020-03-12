@@ -1,7 +1,7 @@
-import React from "react";
-import Helmet from "react-helmet";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import React from 'react';
+import Helmet from 'react-helmet';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 import { Container, Photo, Title, TextBody, BodyHolder } from "../pageStyles";
 
 export default function IndexPage() {
@@ -19,10 +19,10 @@ export default function IndexPage() {
         <BodyHolder>
           <Title>Hey!</Title>
           <TextBody>
-            My name is <b>Fabrício Monteiro</b> and I'm a systems analyst and a
+            My name is <b>Fabrício Monteiro</b> and I&apos;m a systems analyst and a
             web/mobile developer.
             <br />
-            I've built this web page to share my interests and some projects I'm
+            I&apos;ve built this web page to share my interests and some projects I&apos;m
             working on.
             <br />
             <br />

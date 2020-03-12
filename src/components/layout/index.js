@@ -6,10 +6,10 @@ import theme from "../../constants/theme";
 import Sider from "../sider";
 
 export default function Layout({ children }) {
-  const { dark } = theme;
+  const { light } = theme;
 
   return (
-    <ThemeProvider theme={dark}>
+    <ThemeProvider theme={light}>
       <Container>
         <GlobalStyles />
         <Sider />

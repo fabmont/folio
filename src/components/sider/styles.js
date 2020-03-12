@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import { lighten } from "polished";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  background-color: ${({ theme }) => theme.componentBackground};
+  background-color: #272B2F;
   color: white;
   z-index: 100;
 `;
@@ -54,6 +53,7 @@ export const IconsHolder = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 3rem 0;
 
   .link-icon {
     color: white;
@@ -64,6 +64,17 @@ export const IconsHolder = styled.div`
 
     &:not(:last-child) {
       margin-right: 30px;
+    }
+
+    @media (max-width: 768px) {
+      #nav-icon {
+        height: 20px;
+        width: 20px;
+      }
+
+      &:not(:last-child) {
+      margin-right: 12px;
+    }
     }
   }
 `;
