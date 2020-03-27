@@ -27,13 +27,13 @@ export default function Sider() {
           <li>
             <IconsHolder>
               <a href={github} className="link-icon">
-                <GitHub size={35} id="nav-icon" />
+                <GitHub size={25} id="nav-icon" />
               </a>
               <a href={linkedin} className="link-icon">
-                <Linkedin size={35} id="nav-icon" />
+                <Linkedin size={25} id="nav-icon" />
               </a>
               <a href={instagram} className="link-icon">
-                <Instagram size={35} id="nav-icon" />
+                <Instagram size={25} id="nav-icon" />
               </a>
             </IconsHolder>
           </li>

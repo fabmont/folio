@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { Container, Photo, Title, TextBody, BodyHolder } from "../pageStyles";
@@ -9,12 +8,6 @@ export default function IndexPage() {
     <Layout>
       <Container>
         <SEO title="Home" />
-        <Helmet>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
-            rel="stylesheet"
-          />
-        </Helmet>
         <Photo />
         <BodyHolder>
           <Title>Hey!</Title>

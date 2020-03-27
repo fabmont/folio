@@ -1,8 +1,9 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { Menu } from 'react-feather';
 
 export const Container = styled.div`
   min-height: 100vh;
-  grid-template-columns: 0.5fr 4fr;
+  grid-template-columns: 0 4fr;
   display: grid;
   background-color: ${({ theme }) => theme.bodyBackground};
 
@@ -15,11 +16,35 @@ export const Container = styled.div`
   }
 `;
 
+export const MenuIcon = styled(Menu).attrs({
+  size: 30,
+})`
+  cursor: pointer;
+  color: ${({ theme }) => theme.textColor};
+`;
+
+export const MenuBar = styled.div.attrs({
+  className: 'menu-bar',
+})`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  height: 6rem;
+`;
+
 export const PageContent = styled.div`
   padding: 10%;
 
-  @media (max-width: 425px) {
-    margin-top: 5rem;
+  .menu-bar {
+      display: none;
+    }
+
+  @media (max-width: 750px) {
+    .menu-bar {
+      display: flex;
+    }
+
     padding: 0 16px 16px 16px;
   }
 `;
