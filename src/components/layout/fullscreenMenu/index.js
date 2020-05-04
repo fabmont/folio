@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'gatsby';
-import { GitHub, Linkedin, Instagram, X } from "react-feather";
-import { MenuDrawer, NavMenu, IconsHolder } from './styles';
-import { github, linkedin, instagram } from "../../../constants/socialNetworks";
+import { GitHub, Linkedin, Instagram, X, Sun, Moon } from 'react-feather';
+import { MenuDrawer, NavMenu, IconsHolder, ThemeToggle } from './styles';
+import { github, linkedin, instagram } from '../../../constants/socialNetworks';
+import { ThemeContext } from '..';
 
 export default function FullscreenMenu({ closeModal, drawerVisible }) {
+  const { darkModeActiveted, toggleDarkMode } = useContext(ThemeContext);
+
   return (
     <MenuDrawer drawerVisible={drawerVisible}>
+      <ThemeToggle onClick={toggleDarkMode}>
+        {darkModeActiveted ? <Sun size={25} /> : <Moon size={25} />}
+      </ThemeToggle>
       <X
         size={30}
         color="white"
@@ -16,29 +22,17 @@ export default function FullscreenMenu({ closeModal, drawerVisible }) {
       <NavMenu>
         <ol>
           <li>
-            <Link
-              activeClassName="link-active"
-              className="link"
-              to="/"
-            >
+            <Link activeClassName="link-active" className="link" to="/">
               Home
             </Link>
           </li>
           <li>
-            <Link
-              activeClassName="link-active"
-              className="link"
-              to="/projects"
-            >
+            <Link activeClassName="link-active" className="link" to="/projects">
               Projects
             </Link>
           </li>
           <li>
-            <Link
-              activeClassName="link-active"
-              className="link"
-              to="/contacts"
-            >
+            <Link activeClassName="link-active" className="link" to="/contacts">
               Contact
             </Link>
           </li>

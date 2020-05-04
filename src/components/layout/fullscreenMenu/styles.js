@@ -9,10 +9,25 @@ export const MenuDrawer = styled.div`
   padding: 20% 0;
   background-color: #272b2f;
   transition: 0.3s;
-  right: ${({ drawerVisible }) => drawerVisible ? 0 : '100%'};
+  right: ${({ drawerVisible }) => (drawerVisible ? 0 : '100%')};
   height: 100vh;
   width: 100vw;
   z-index: 999;
+`;
+
+export const ThemeToggle = styled.button`
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background-color: transparent;
+  border: 0;
+  padding: 12px;
+  color: ${({ theme }) => theme.primaryColor};
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const NavMenu = styled.nav`

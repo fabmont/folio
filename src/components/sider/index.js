@@ -1,12 +1,20 @@
-import React from "react";
-import { Link } from "gatsby";
-import { GitHub, Linkedin, Instagram } from "react-feather";
-import { Container, NavMenu, IconsHolder } from "./styles";
-import { github, linkedin, instagram } from "../../constants/socialNetworks";
+import React, { useContext } from 'react';
+import { Link } from 'gatsby';
+import { GitHub, Linkedin, Instagram, Sun, Moon } from 'react-feather';
+import { Container, NavMenu, IconsHolder, ThemeContainer } from './styles';
+import { github, linkedin, instagram } from '../../constants/socialNetworks';
+import { ThemeContext } from '../layout';
 
 export default function Sider() {
+  const { darkModeActiveted, toggleDarkMode } = useContext(ThemeContext);
+
   return (
     <Container>
+      <ThemeContainer>
+        <button type="button" className="toggle-btn" onClick={toggleDarkMode}>
+          {darkModeActiveted ? <Sun size={25} /> : <Moon size={25} />}
+        </button>
+      </ThemeContainer>
       <NavMenu>
         <ol>
           <li>

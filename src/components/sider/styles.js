@@ -1,19 +1,43 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  background-color: #272B2F;
+  background-color: #272b2f;
   color: white;
   z-index: 100;
+`;
+
+export const ThemeContainer = styled.div`
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display: flex;
+  flex-direction: row;
+
+  .toggle-btn {
+    background-color: transparent;
+    border: 0;
+    padding: 12px;
+    color: ${({ theme }) => theme.primaryColor};
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  @media (max-width: 750px) {
+    display: none;
+  }
 `;
 
 export const NavMenu = styled.nav`
   ol {
     bottom: 0;
-    font-family: "Share Tech Mono";
+    font-family: 'Share Tech Mono';
     font-weight: bold;
     list-style: none;
   }
@@ -73,8 +97,8 @@ export const IconsHolder = styled.div`
       }
 
       &:not(:last-child) {
-      margin-right: 12px;
-    }
+        margin-right: 12px;
+      }
     }
   }
 `;
