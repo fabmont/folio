@@ -1,14 +1,13 @@
-import styled from "styled-components";
-import { transparentize } from "polished";
+import styled from 'styled-components';
+import { transparentize } from 'polished';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  font-family: "Share Tech Mono";
+  font-family: 'Share Tech Mono';
 
   @media (max-width: 425px) {
     flex-direction: column;
-    padding-bottom: 30px;
   }
 `;
 
@@ -20,11 +19,21 @@ export const BodyText = styled.span`
   color: ${({ theme }) => theme.textColor};
 `;
 
+export const CardContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
 export const Card = styled.div`
-  width: 50%;
+  width: 100%;
   height: 300px;
   background-color: ${({ theme }) => theme.componentBackground};
-  box-shadow: 0 0 16px ${transparentize(0.9, "#000")};
+  box-shadow: 0 0 16px ${transparentize(0.9, '#000')};
   border-radius: 6px;
   display: flex;
   flex-direction: row;
@@ -38,11 +47,11 @@ export const Card = styled.div`
 
     @keyframes shadowhover {
       0% {
-        box-shadow: 0 0 16px ${transparentize(0.9, "#000")};
+        box-shadow: 0 0 16px ${transparentize(0.9, '#000')};
       }
 
       100% {
-        box-shadow: 0 0 16px ${transparentize(0.7, "#000")};
+        box-shadow: 0 0 16px ${transparentize(0.7, '#000')};
       }
     }
   }
@@ -54,11 +63,11 @@ export const Card = styled.div`
 
     @keyframes shadowleave {
       0% {
-        box-shadow: 0 0 16px ${transparentize(0.7, "#000")};
+        box-shadow: 0 0 16px ${transparentize(0.7, '#000')};
       }
 
       100% {
-        box-shadow: 0 0 16px ${transparentize(0.9, "#000")};
+        box-shadow: 0 0 16px ${transparentize(0.9, '#000')};
       }
     }
   }
@@ -74,7 +83,7 @@ export const ThumbImg = styled.div`
 export const CardContent = styled.div`
   width: 60%;
   padding: 5%;
-  font-family: "Share Tech Mono";
+  font-family: 'Share Tech Mono';
   display: flex;
   align-items: flex-start;
   justify-content: space-between;

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import { navigate } from 'gatsby';
-import Layout from "../../components/layout";
-import SEO from "../../components/seo";
+import Layout from '../../components/layout';
+import SEO from '../../components/seo';
 import {
   Container,
   Title,
@@ -11,9 +11,10 @@ import {
   CardContent,
   CardTitle,
   IconsHolder,
-  CardDescription
-} from "../../pageStyles/projects";
-import projects from "../../constants/projects";
+  CardDescription,
+  CardContainer,
+} from '../../pageStyles/projects';
+import projects from '../../constants/projects';
 
 export default function Projects() {
   return (
@@ -28,22 +29,24 @@ export default function Projects() {
         </BodyText>
         <br />
         <br />
-        {projects.map(card => (
-          <Card onClick={() => navigate('/projects/ocb/')}>
-            <ThumbImg src={card.thumb} />
-            <CardContent>
-              <div>
-                <CardTitle>{card.name}</CardTitle>
+        <CardContainer>
+          {projects.map((card) => (
+            <Card onClick={() => navigate(card.path)} key={card.key}>
+              <ThumbImg src={card.thumb} />
+              <CardContent>
+                <div>
+                  <CardTitle>{card.name}</CardTitle>
+                  <br />
+                  <br />
+                  <CardDescription>{card.description}</CardDescription>
+                </div>
                 <br />
                 <br />
-                <CardDescription>{card.description}</CardDescription>
-              </div>
-              <br />
-              <br />
-              <IconsHolder>{card.techs.map(icon => icon)}</IconsHolder>
-            </CardContent>
-          </Card>
-        ))}
+                <IconsHolder>{card.techs.map((icon) => icon)}</IconsHolder>
+              </CardContent>
+            </Card>
+          ))}
+        </CardContainer>
       </Container>
     </Layout>
   );

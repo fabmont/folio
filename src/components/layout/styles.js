@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from 'styled-components';
 import { Menu } from 'react-feather';
 
 export const Container = styled.div`
@@ -37,8 +37,8 @@ export const PageContent = styled.div`
   padding: 10%;
 
   .menu-bar {
-      display: none;
-    }
+    display: none;
+  }
 
   @media (max-width: 750px) {
     .menu-bar {
