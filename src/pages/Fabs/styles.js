@@ -33,8 +33,13 @@ export const TextContainer = styled.div`
   max-width: 350px;
   margin-left: 35px;
 
+  h1 {
+    color: ${({ theme }) => theme.titleColor};
+  }
+
   p {
     font-size: 15px;
+    color: ${({ theme }) => theme.textColor};
   }
 `;
 
