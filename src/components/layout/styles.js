@@ -1,51 +1,132 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { Menu } from 'react-feather';
+import { Moon, Sun } from 'react-feather';
+import { Link } from 'gatsby';
+import { transparentize } from 'polished';
 
 export const Container = styled.div`
-  min-height: 100vh;
-  grid-template-columns: 0 4fr;
-  display: grid;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: ${({ theme }) => theme.bodyBackground};
-
-  @media (min-width: 1200px) {
-    grid-template-columns: 1.35fr 4fr;
-  }
-
-  @media (min-width: 750px) {
-    grid-template-columns: 1.25fr 4fr;
-  }
 `;
 
-export const MenuIcon = styled(Menu).attrs({
-  size: 30,
+export const MoonIcon = styled(Moon).attrs({
+  size: 20,
 })`
   cursor: pointer;
   color: ${({ theme }) => theme.textColor};
+  position: absolute;
+  right: 0;
+
+  @media (max-width: 1366px) {
+    right: 18px;
+  }
+`;
+
+export const SunIcon = styled(Sun).attrs({
+  size: 20,
+})`
+  cursor: pointer;
+  color: ${({ theme }) => theme.textColor};
+  position: absolute;
+  right: 0;
+
+  @media (max-width: 1366px) {
+    right: 18px;
+  }
 `;
 
 export const MenuBar = styled.div.attrs({
   className: 'menu-bar',
 })`
+  margin: 0 auto;
+  max-width: 1366px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  height: 6rem;
+  justify-content: center;
+  height: 56px;
+  position: relative;
+
+  .menu-link-active {
+    font-weight: bold;
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 1366px) {
+    padding: 0 18px;
+  }
+`;
+
+export const MenuLink = styled(Link)`
+  color: ${({ theme }) => theme.titleColor};
+  opacity: 0.3;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.2s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:not(:last-child) {
+    margin-right: 68px;
+  }
+
+  @media (max-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 38px;
+    }
+  }
 `;
 
 export const PageContent = styled.div`
-  padding: 10%;
+  margin: 0 auto;
+  max-width: 1366px;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+`;
 
-  .menu-bar {
-    display: none;
+export const Footer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 30px 0;
+  background-color: ${({ theme }) => theme.componentBackground};
+`;
+
+export const FooterContainer = styled.div`
+  margin: 0 auto;
+  max-width: 1366px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: ${({ theme }) => transparentize(0.7, theme.textColor)};
+  font-size: 15px;
+
+  .menu-link-active {
+    font-weight: bold;
+    opacity: 1;
   }
 
-  @media (max-width: 750px) {
-    .menu-bar {
-      display: flex;
-    }
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
 
-    padding: 0 16px 16px 16px;
+  @media (max-width: 1366px) {
+    padding: 0 18px;
   }
 `;
 
@@ -56,16 +137,17 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   *, *:before, *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 
-  #root {
+  #___gatsby, #gatsby-focus-wrapper {
     height: 100%;
   }
 
   body {
     margin: 0;
-    font-family: -apple-system,
+    padding: 0;
+    font-family: 'Poppins', -apple-system,
     "Open Sans", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
       "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
       sans-serif;

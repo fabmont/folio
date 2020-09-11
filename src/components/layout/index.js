@@ -7,11 +7,13 @@ import {
   GlobalStyles,
   PageContent,
   MenuBar,
-  MenuIcon,
+  MoonIcon,
+  SunIcon,
+  MenuLink,
+  Footer,
+  FooterContainer,
 } from './styles';
 import theme from '../../constants/theme';
-import Sider from '../sider';
-import FullscreenMenu from './fullscreenMenu';
 
 export const ThemeContext = React.createContext();
 
@@ -28,13 +30,8 @@ export default function Layout({ children }) {
     return true;
   };
 
-  const [drawerVisible, setDrawerVisible] = useState(false);
   const [darkModeActiveted, setDarkModeActiveted] = useState(getStorageTheme());
   const { dark, light } = theme;
-
-  const openModal = () => setDrawerVisible(true);
-
-  const closeModal = () => setDrawerVisible(false);
 
   const toggleDarkMode = () => {
     const currentTheme = getStorageTheme();
@@ -59,20 +56,34 @@ export default function Layout({ children }) {
       <ThemeProvider theme={darkModeActiveted ? dark : light}>
         <Helmet>
           <link
-            href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
             rel="stylesheet"
           />
         </Helmet>
-        <FullscreenMenu drawerVisible={drawerVisible} closeModal={closeModal} />
         <Container>
           <GlobalStyles />
-          <Sider />
-          <PageContent>
-            <MenuBar>
-              <MenuIcon onClick={openModal} />
-            </MenuBar>
-            {children}
-          </PageContent>
+          <MenuBar>
+            <MenuLink to="/" activeClassName="menu-link-active">
+              Fabs
+            </MenuLink>
+            <MenuLink to="/blog" activeClassName="menu-link-active">
+              Blog
+            </MenuLink>
+            <MenuLink to="/work" activeClassName="menu-link-active">
+              Work
+            </MenuLink>
+            {darkModeActiveted ? (
+              <SunIcon onClick={toggleDarkMode} />
+            ) : (
+              <MoonIcon onClick={toggleDarkMode} />
+            )}
+          </MenuBar>
+          <PageContent>{children}</PageContent>
+          <Footer>
+            <FooterContainer>
+              Designed & developed by&nbsp;<b>@fabmont</b>
+            </FooterContainer>
+          </Footer>
         </Container>
       </ThemeProvider>
     </ThemeContext.Provider>
