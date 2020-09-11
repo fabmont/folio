@@ -28,3 +28,31 @@ export const MeImg = styled.div`
     height: 300px;
   }
 `;
+
+export const TextContainer = styled.div`
+  max-width: 350px;
+  margin-left: 35px;
+
+  p {
+    font-size: 15px;
+  }
+`;
+
+export const IconsContainer = styled.div`
+  max-width: 350px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+
+  a {
+    color: ${({ theme }) => theme.titleColor};
+    transition: 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+`;
