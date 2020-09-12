@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import { ThemeProvider } from "styled-components";
-import Helmet from "react-helmet";
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { ThemeProvider } from 'styled-components';
+import Helmet from 'react-helmet';
 import {
   Container,
   GlobalStyles,
@@ -12,18 +12,18 @@ import {
   MenuLink,
   Footer,
   FooterContainer,
-} from "./styles";
-import theme from "../../constants/theme";
+} from './styles';
+import theme from '../../constants/theme';
 
 export const ThemeContext = React.createContext();
 
 export default function Layout({ children }) {
   const getStorageTheme = () => {
-    if (localStorage.getItem("themeDark") === "true") {
+    if (localStorage.getItem('themeDark') === 'true') {
       return true;
     }
 
-    if (localStorage.getItem("themeDark") === "false") {
+    if (localStorage.getItem('themeDark') === 'false') {
       return false;
     }
 
@@ -37,7 +37,7 @@ export default function Layout({ children }) {
     const currentTheme = getStorageTheme();
 
     setDarkModeActiveted((prev) => !prev);
-    localStorage.setItem("themeDark", !currentTheme);
+    localStorage.setItem('themeDark', !currentTheme);
   };
 
   const contextParams = {
@@ -46,8 +46,8 @@ export default function Layout({ children }) {
   };
 
   useEffect(() => {
-    if (!localStorage.getItem("themeDark")) {
-      localStorage.setItem("themeDark", true);
+    if (!localStorage.getItem('themeDark')) {
+      localStorage.setItem('themeDark', true);
     }
   }, []);
 
@@ -80,9 +80,7 @@ export default function Layout({ children }) {
           </MenuBar>
           <PageContent>{children}</PageContent>
           <Footer>
-            <FooterContainer>
-              Designed & developed by&nbsp;<b>@fabmont</b>
-            </FooterContainer>
+            <FooterContainer>Designed & developed by @fabmont</FooterContainer>
           </Footer>
         </Container>
       </ThemeProvider>

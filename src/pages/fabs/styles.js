@@ -7,6 +7,10 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const MeImg = styled.div`
@@ -21,6 +25,7 @@ export const MeImg = styled.div`
   @media (max-width: 728px) {
     width: 250px;
     height: 400px;
+    margin-top: 50px;
   }
 
   @media (max-width: 425px) {
@@ -41,6 +46,11 @@ export const TextContainer = styled.div`
     font-size: 15px;
     color: ${({ theme }) => theme.textColor};
   }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    margin: 20px 0 50px 0;
+  }
 `;
 
 export const IconsContainer = styled.div`
@@ -59,5 +69,10 @@ export const IconsContainer = styled.div`
     &:not(:last-child) {
       margin-right: 24px;
     }
+  }
+
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
   }
 `;
