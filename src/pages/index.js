@@ -1,3 +1,3 @@
-import Fabs from './Fabs';
+import Fabs from './fabs';
 
 export default Fabs;

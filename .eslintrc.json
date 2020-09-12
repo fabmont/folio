@@ -1,29 +1,58 @@
 {
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
   "extends": [
-    "react-app",
+    "plugin:react/recommended",
     "airbnb",
-    "plugin:jsx-a11y/recommended",
-    "prettier",
+    "plugin:testing-library/recommended",
+    "plugin:testing-library/react",
+    "plugin:cypress/recommended",
+    "plugin:prettier/recommended",
     "prettier/react"
   ],
-  "plugins": [
-    "jsx-a11y",
-    "prettier"
-  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "testing-library", "cypress"],
   "rules": {
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
-    "import/prefer-default-export": "off",
-    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-    "react/jsx-one-expression-per-line": "off",
-    "global-require": "off",
-    "react-native/no-raw-text": "off",
-    "no-param-reassign": "off",
-    "no-underscore-dangle": "off",
-    "camelcase": "off",
-    "no-console": ["error"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-props-no-spreading": 0,
-    "import/no-cycle": 0
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/assertion-before-screenshot": "warn",
+    "react/jsx-curly-brace-presence": "off",
+    "react/no-unescaped-entities": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": [
+      "error",
+      {
+        "exceptions": ["Modal", "ProcessBuilder"]
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "ignorePropertyModificationsFor": ["state"]
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "controlComponents": ["DatePicker"],
+        "assert": "both",
+        "depth": 2
+      }
+    ]
   }
 }
