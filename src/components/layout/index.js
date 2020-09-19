@@ -27,7 +27,7 @@ export default function Layout({ children }) {
       return false;
     }
 
-    return true;
+    return false;
   };
 
   const [darkModeActiveted, setDarkModeActiveted] = useState(getStorageTheme());
@@ -45,11 +45,11 @@ export default function Layout({ children }) {
     toggleDarkMode,
   };
 
-  useEffect(() => {
-    if (!localStorage.getItem('themeDark')) {
-      localStorage.setItem('themeDark', true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!localStorage.getItem('themeDark')) {
+  //     localStorage.setItem('themeDark', true);
+  //   }
+  // }, []);
 
   return (
     <ThemeContext.Provider value={contextParams}>
@@ -80,7 +80,7 @@ export default function Layout({ children }) {
           </MenuBar>
           <PageContent>{children}</PageContent>
           <Footer>
-            <FooterContainer>Designed & developed by @fabmont</FooterContainer>
+            <FooterContainer>designed & developed by @fabmont</FooterContainer>
           </Footer>
         </Container>
       </ThemeProvider>

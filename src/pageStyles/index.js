@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import MePhoto from '../../images/me.jpg';
+import MePhoto from '../images/me.jpg';
 
 export const Container = styled.div`
   flex-grow: 1;
