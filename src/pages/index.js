@@ -11,7 +11,7 @@ import {
   IconsContainer,
 } from '../pageStyles/index';
 
-export default function Fabs() {
+export default function Home() {
   return (
     <Layout>
       <SEO title="Home" />

@@ -18,12 +18,14 @@ import theme from '../../constants/theme';
 export const ThemeContext = React.createContext();
 
 export default function Layout({ children }) {
+  const themeDark =
+    typeof window !== undefined && window.localStorage.getItem('themeDark');
   const getStorageTheme = () => {
-    if (localStorage.getItem('themeDark') === 'true') {
+    if (themeDark === 'true') {
       return true;
     }
 
-    if (localStorage.getItem('themeDark') === 'false') {
+    if (themeDark === 'false') {
       return false;
     }
 
@@ -44,12 +46,6 @@ export default function Layout({ children }) {
     darkModeActiveted,
     toggleDarkMode,
   };
-
-  // useEffect(() => {
-  //   if (!localStorage.getItem('themeDark')) {
-  //     localStorage.setItem('themeDark', true);
-  //   }
-  // }, []);
 
   return (
     <ThemeContext.Provider value={contextParams}>
