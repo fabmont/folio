@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Layout from '../../components/layout';
-import { Container } from './styles';
+import { Container } from '../../pageStyles/work';
 import Card from '../../components/card';
-import worklist from './worklist';
+import worklist from '../../constants/worklist';
 
 export default function Work() {
   return (
