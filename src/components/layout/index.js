@@ -18,15 +18,15 @@ import theme from '../../constants/theme';
 export const ThemeContext = React.createContext();
 
 export default function Layout({ children }) {
-  const localStorageRef = window && window.localStorage;
-  const themeDark = localStorageRef && localStorageRef.getItem('themeDark');
   const getStorageTheme = () => {
-    if (themeDark === 'true') {
-      return true;
-    }
+    if (typeof window !== 'undefined') {
+      if (window.localStorage.getItem('themeDark') === 'true') {
+        return true;
+      }
 
-    if (themeDark === 'false') {
-      return false;
+      if (window.localStorage.getItem('themeDark') === 'false') {
+        return false;
+      }
     }
 
     return false;
