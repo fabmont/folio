@@ -39,7 +39,7 @@ bin/published.js
 test/**/public
 .gatsby-context.js
 .DS_Store
-public/
+/public
 node_modules/
 .cache/
 .netlify
@@ -56,6 +56,7 @@ node_modules/
 # lock files
 yarn.lock
 package-lock.json
+.npmrc
 
 # starters are special; we want to persist the lock files
 !starters/*/package-lock.json
