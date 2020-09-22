@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Github, Instagram } from 'styled-icons/fa-brands';
+import { Linkedin, Github, Instagram, Youtube } from 'styled-icons/fa-brands';
 import { Envelope } from 'styled-icons/fa-solid';
 
 import Layout from '../components/layout';
@@ -38,6 +38,7 @@ export default function Home() {
               href="https://linkedin.com/in/fabmont"
               target="_blank"
               rel="noopener noreferrer"
+              className="linkedin-icon"
             >
               <Linkedin size={30} />
             </a>
@@ -45,6 +46,7 @@ export default function Home() {
               href="https://github.com/fabmont"
               target="_blank"
               rel="noopener noreferrer"
+              className="github-icon"
             >
               <Github size={30} />
             </a>
@@ -52,10 +54,19 @@ export default function Home() {
               href="https://instagram.com/fab_mont"
               target="_blank"
               rel="noopener noreferrer"
+              className="instagram-icon"
             >
               <Instagram size={30} />
             </a>
-            <a href="mailto:fabriciosantos47@gmail.com">
+            <a
+              href="https://www.youtube.com/channel/UCiJHIHP-suKBwZnJRJ47fwA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="youtube-icon"
+            >
+              <Youtube size={30} />
+            </a>
+            <a href="mailto:fabriciosantos47@gmail.com" className="mail-icon">
               <Envelope size={30} />
             </a>
           </IconsContainer>

@@ -63,12 +63,25 @@ export const IconsContainer = styled.div`
     color: ${({ theme }) => theme.titleColor};
     transition: 0.2s ease;
 
-    &:hover {
-      opacity: 0.8;
-    }
     &:not(:last-child) {
       margin-right: 24px;
     }
+  }
+
+  .linkedin-icon:hover {
+    color: #2b78b5;
+  }
+  .github-icon:hover {
+    opacity: 0.8;
+  }
+  .instagram-icon:hover {
+    color: #da5680;
+  }
+  .youtube-icon:hover {
+    color: #e54f0d;
+  }
+  .mail-icon:hover {
+    opacity: 0.8;
   }
 
   @media (max-width: 768px) {

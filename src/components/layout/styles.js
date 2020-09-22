@@ -8,6 +8,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.bodyBackground};
+  color: ${({ theme }) => theme.textColor};
 `;
 
 export const MoonIcon = styled(Moon).attrs({
