@@ -1,4 +1,4 @@
-import CBC from '../../images/cbc.jpg';
+import CBC from '../images';
 
 export default [
   {

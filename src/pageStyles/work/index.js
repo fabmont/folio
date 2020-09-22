@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import worklist from './worklist';
+import worklist from '../../constants/worklist';
 
 const workListLength = worklist.length;
 
