@@ -14,7 +14,7 @@ import {
 export default function Home() {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Fabs" />
       <Container>
         <MeImg />
         <TextContainer>
