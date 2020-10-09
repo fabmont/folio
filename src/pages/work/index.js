@@ -10,7 +10,7 @@ export default function Work() {
     <Layout>
       <Container>
         {worklist.map((item) => (
-          <Card src={item.src} title={item.title} />
+          <Card src={item.src} title={item.title} shortDesc={item.shortDesc} />
         ))}
       </Container>
     </Layout>

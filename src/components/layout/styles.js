@@ -103,6 +103,7 @@ export const Footer = styled.div`
   position: relative;
   padding: 30px 0;
   background-color: ${({ theme }) => theme.componentBackground};
+  opacity: 0.3;
 `;
 
 export const FooterContainer = styled.div`
