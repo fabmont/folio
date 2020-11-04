@@ -14,7 +14,6 @@ const Home: React.FC = () => (
   <Layout>
     <Head>
       <title>Home • fabmont</title>
-      <link rel="icon" href="/favicon.ico" />
     </Head>
     <Container>
       <MeImg />

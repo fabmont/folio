@@ -41,7 +41,7 @@ export const TextContainer = styled.div`
   }
   @media (max-width: 768px) {
     text-align: center;
-    margin: 20px 0 50px 0;
+    margin: 50px 0 50px 0;
   }
 `;
 
