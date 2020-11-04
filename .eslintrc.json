@@ -1,58 +1,41 @@
 {
   "env": {
     "browser": true,
-    "es6": true,
+    "es2021": true,
+    "node": true,
     "jest": true
   },
   "extends": [
     "plugin:react/recommended",
     "airbnb",
-    "plugin:testing-library/recommended",
-    "plugin:testing-library/react",
-    "plugin:cypress/recommended",
-    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "prettier/standard",
     "prettier/react"
   ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 2018,
+    "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "testing-library", "cypress"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier"
+  ],
   "rules": {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "cypress/no-assigning-return-values": "error",
-    "cypress/no-unnecessary-waiting": "error",
-    "cypress/assertion-before-screenshot": "warn",
-    "react/jsx-curly-brace-presence": "off",
-    "react/no-unescaped-entities": "off",
-    "import/prefer-default-export": "off",
-    "react/jsx-props-no-spreading": [
-      "error",
-      {
-        "exceptions": ["Modal", "ProcessBuilder"]
-      }
-    ],
-    "no-param-reassign": [
-      "error",
-      {
-        "ignorePropertyModificationsFor": ["state"]
-      }
-    ],
-    "jsx-a11y/label-has-associated-control": [
-      2,
-      {
-        "controlComponents": ["DatePicker"],
-        "assert": "both",
-        "depth": 2
-      }
-    ]
+    "prettier/prettier": "error",
+    "space-before-function-paren": "off",
+    "react/prop-types": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx", ".ts"] }],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "operator-linebreak": "off"
   }
 }
