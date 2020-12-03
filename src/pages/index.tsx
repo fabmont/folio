@@ -13,7 +13,7 @@ import {
 const Home: React.FC = () => (
   <Layout>
     <Head>
-      <title>Home • fabmont</title>
+      <title>Me • fabmont</title>
     </Head>
     <Container>
       <MeImg />

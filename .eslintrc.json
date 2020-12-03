@@ -36,6 +36,7 @@
     "implicit-arrow-linebreak": "off",
     "import/extensions": "off",
     "import/no-unresolved": "off",
-    "operator-linebreak": "off"
+    "operator-linebreak": "off",
+    "object-curly-newline": "off"
   }
 }
