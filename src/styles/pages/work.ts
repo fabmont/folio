@@ -50,10 +50,13 @@ export const Card = styled.div`
   }
 `;
 
-export const CardPic = styled.div`
+export const CardPic = styled.div<{ imgSrc: string }>`
   width: 100%;
   height: 70%;
-  background: lightgray;
+  background-image: url(${({ imgSrc }) => imgSrc});
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 `;
 
 export const CardFooter = styled.div`
@@ -64,6 +67,7 @@ export const CardFooter = styled.div`
   width: 100%;
   height: 30%;
   padding: 14px;
+  background: ${(props: ThemeProps) => props.theme.componentBackground};
 
   h2 {
     margin-bottom: 8px;

@@ -50,7 +50,7 @@ const Work: React.FC = () => {
       <Container projectLength={data.length}>
         {data.map((item) => (
           <Card key={item.id}>
-            <CardPic />
+            <CardPic imgSrc={item.thumbUrl} />
             <CardFooter>
               <h2>{item.title}</h2>
               <div>
