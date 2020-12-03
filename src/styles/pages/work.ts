@@ -15,7 +15,7 @@ export const Container = styled.div<ThemeProps>`
   display: grid;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(
     ${(props) => props.projectLength / 2},
     minmax(500px, 1fr)
@@ -27,9 +27,13 @@ export const Container = styled.div<ThemeProps>`
     margin: 0 18px;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     margin: 0 18px;
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(
+      ${(props) => props.projectLength},
+      minmax(500px, 1fr)
+    );
   }
 `;
 

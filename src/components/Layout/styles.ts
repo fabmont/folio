@@ -51,17 +51,19 @@ export const MenuBar = styled.div.attrs({
     color: ${({ theme }) => theme.titleColor};
     opacity: 0.3;
     text-decoration: none;
+    text-align: center;
     letter-spacing: 1px;
     transition: 0.2s ease;
     &:hover {
       opacity: 0.5;
     }
     &:not(:last-child) {
-      margin-right: 68px;
+      width: 120px;
     }
     @media (max-width: 768px) {
       &:not(:last-child) {
-        margin-right: 38px;
+        text-align: start;
+        width: 80px;
       }
     }
   }
