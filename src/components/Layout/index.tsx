@@ -27,8 +27,20 @@ export default function Layout({ children }) {
   const [darkModeActiveted, setDarkModeActiveted] = useState<boolean>(false);
   const { dark, light } = theme;
 
+  useEffect(() => {
+    if (localStorage && localStorage.getItem) {
+      const isDarkTheme = localStorage.getItem('darkMode') === 'true';
+      setDarkModeActiveted(isDarkTheme);
+    }
+  }, []);
+
   const toggleDarkMode = () => {
-    setDarkModeActiveted((prev) => !prev);
+    setDarkModeActiveted((prev) => {
+      if (localStorage && localStorage.setItem) {
+        localStorage.setItem('darkMode', `${!prev}`);
+      }
+      return !prev;
+    });
   };
 
   const contextParams = {

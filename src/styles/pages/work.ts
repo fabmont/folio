@@ -40,6 +40,14 @@ export const Container = styled.div<ThemeProps>`
 export const Card = styled.div`
   border: 1px solid ${(props: ThemeProps) => props.theme.disabledColor};
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 `;
 
 export const CardPic = styled.div`
