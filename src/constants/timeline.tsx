@@ -17,7 +17,7 @@ const timeline: TimelineItemInterface[] = [
       <>
         Started to write your first lines of code with <b>C#</b> and{' '}
         <b>Visual Basic</b>. Also started a &quot;company&quot; called{' '}
-        <b>Vault Computer</b> with school friend.
+        <b>Vault Computer</b> with a school friend.
       </>
     ),
   },
