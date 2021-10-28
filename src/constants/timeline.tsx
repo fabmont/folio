@@ -24,17 +24,17 @@ const timeline: TimelineItemInterface[] = [
   {
     year: '2017',
     description:
-      'Started to study Software Engineering at Universidade de Brasília. But dropped out in late 2019 to focus on my career.',
+      'Started to study Software Engineering at Universidade de Brasília. But dropped out in late 2019 to focus on his career.',
   },
   {
     year: '2018',
     description: (
       <>
-        Started to work professionally at{' '}
+        Started to work professionally as a Frontend Engineer at{' '}
         <Link href="https://coopersystem.com.br/" target="_blank">
           Coopersystem
-        </Link>{' '}
-        as a Frontend Engineer.
+        </Link>
+        .
       </>
     ),
   },
@@ -65,12 +65,12 @@ const timeline: TimelineItemInterface[] = [
     year: '2021-now',
     description: (
       <>
-        I&apos;ve been working as a Frontend Engineer at{' '}
+        Works as a Frontend Engineer at{' '}
         <Link href="https://cornershopapp.com/" target="_blank">
           Cornershop by Uber
         </Link>
-        &nbsp;leading the frontend development of a backoffice application made
-        with <b>React</b>.
+        &nbsp;leading the frontend development of a backoffice tools made with{' '}
+        <b>React</b>.
       </>
     ),
   },
