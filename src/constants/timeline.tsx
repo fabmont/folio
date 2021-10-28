@@ -31,11 +31,7 @@ const timeline: TimelineItemInterface[] = [
     description: (
       <>
         Started to work professionally at{' '}
-        <Link
-          href="https://coopersystem.com.br/"
-          target="blank"
-          rel="noopener norefferer"
-        >
+        <Link href="https://coopersystem.com.br/" target="_blank">
           Coopersystem
         </Link>{' '}
         as a Frontend Engineer.
@@ -49,17 +45,13 @@ const timeline: TimelineItemInterface[] = [
         Joined the{' '}
         <Link
           href="https://novatics.com.br/"
-          target="blank"
+          target="_blank"
           rel="noopener norefferer"
         >
           Novatics
         </Link>{' '}
         team to work on{' '}
-        <Link
-          href="https://appen.com/"
-          target="blank"
-          rel="noopener norefferer"
-        >
+        <Link href="https://appen.com/" target="_blank">
           Appen
         </Link>
         &apos;s projects as a Software Engineer focused on frontend. Besides
@@ -74,11 +66,7 @@ const timeline: TimelineItemInterface[] = [
     description: (
       <>
         I&apos;ve been working as a Frontend Engineer at{' '}
-        <Link
-          href="https://cornershopapp.com/"
-          target="blank"
-          rel="noopener norefferer"
-        >
+        <Link href="https://cornershopapp.com/" target="_blank">
           Cornershop by Uber
         </Link>
         &nbsp;leading the frontend development of a backoffice application made

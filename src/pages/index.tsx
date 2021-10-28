@@ -9,7 +9,7 @@ import {
   ListItem,
   Button,
   Icon,
-  Divider,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import {
@@ -25,13 +25,22 @@ import timeline from '../constants/timeline';
 const Home: React.FC = () => (
   <div>
     <Container>
-      <Box display={{ md: 'flex' }} alignItems="center" my="8">
+      <Box
+        display={{ md: 'flex' }}
+        alignItems="center"
+        my="8"
+        pb="8"
+        borderBottom={`1px solid ${useColorModeValue(
+          '#00000020',
+          '#ffffff20',
+        )}`}
+      >
         <Box
           flexShrink={0}
           mt={{ base: 4, md: 0 }}
           mr={{ md: 6 }}
           mb="4"
-          textAlign="start"
+          textAlign="center"
         >
           <Image
             borderColor="whiteAlpha.800"
@@ -46,7 +55,7 @@ const Home: React.FC = () => (
             alt="Profile image"
           />
         </Box>
-        <Box flexGrow={1}>
+        <Box flexGrow={1} textAlign={['center', 'start']}>
           <Heading as="h2" variant="page-title">
             Fabs
           </Heading>
@@ -54,15 +63,13 @@ const Home: React.FC = () => (
         </Box>
       </Box>
 
-      <Divider mb="8" />
-
       <Section delay="0.1">
         <Heading as="h3" variant="section-title">
           Hello!
         </Heading>
         <p>This is my fancy intro.</p>
-        <Box align="end" my={4}>
-          <NextLink href="/works">
+        <Box align="center" my={4}>
+          <NextLink href="/work">
             <Button
               rightIcon={<ChevronRightIcon />}
               colorScheme="blue"
@@ -141,7 +148,7 @@ const Home: React.FC = () => (
           </ListItem>
         </List>
 
-        <Box align="end" my={4}>
+        <Box align="center" my={4}>
           <NextLink href="/posts">
             <Button
               rightIcon={<ChevronRightIcon />}

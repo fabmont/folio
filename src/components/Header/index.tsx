@@ -12,6 +12,7 @@ import {
   IconButton,
   MenuButton,
   useColorModeValue,
+  Button,
   Text,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
@@ -62,16 +63,18 @@ const Navbar: React.FC<{ path: string }> = (props) => {
         justify="space-between"
       >
         <Flex align="center" mr={5}>
-          <Heading as="h1" size="md" letterSpacing="tighter">
-            <Link href="/">
-              <Text color={useColorModeValue('gray.800', 'whiteAlpha.900')}>
-                <span role="img" aria-label="hi">
-                  👋🏼&nbsp;&nbsp;
-                </span>
-                Fabrício Monteiro
-              </Text>
-            </Link>
-          </Heading>
+          <NextLink href="/" passHref>
+            <Button variant="ghost">
+              <Heading as="h1" size="md" letterSpacing="tighter">
+                <Text color={useColorModeValue('gray.800', 'whiteAlpha.900')}>
+                  <span role="img" aria-label="hi">
+                    👋🏼&nbsp;&nbsp;
+                  </span>
+                  Fabrício Monteiro
+                </Text>
+              </Heading>
+            </Button>
+          </NextLink>
         </Flex>
 
         <Stack
