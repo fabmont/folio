@@ -11,7 +11,7 @@ const Footer: React.FC = () => (
     py="4"
   >
     <Text w="100%">
-      &copy; {new Date().getFullYear()} Fabrício Monteiro. All Rights Reserved.
+      fabmont &copy; {new Date().getFullYear()}. All Rights Reserved.
     </Text>
   </Box>
 );

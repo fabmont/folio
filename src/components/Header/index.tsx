@@ -108,18 +108,12 @@ const Navbar: React.FC<{ path: string }> = (props) => {
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>Home</MenuItem>
                 </NextLink>
-                <NextLink href="/works" passHref>
+                <NextLink href="/work" passHref>
                   <MenuItem as={Link}>Work</MenuItem>
                 </NextLink>
-                <NextLink href="/posts" passHref>
+                <NextLink href="/blog" passHref>
                   <MenuItem as={Link}>Blog</MenuItem>
                 </NextLink>
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
-                >
-                  GitHub
-                </MenuItem>
               </MenuList>
             </Menu>
           </Box>

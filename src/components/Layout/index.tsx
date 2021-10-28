@@ -20,7 +20,7 @@ const Layout: React.FC<{ router: NextRouter }> = ({ children, router }) => (
       <meta property="og:site_name" content="Fabrício Monteiro's Homepage" />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="/card.png" />
-      <title>Fabrício Monteiro - Homepage</title>
+      <title>Fabrício Monteiro</title>
     </Head>
 
     <Header path={router?.asPath} />
