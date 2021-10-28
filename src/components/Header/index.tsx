@@ -15,10 +15,13 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
-import { IoLogoGithub } from 'react-icons/io5';
 import ThemeToggleButton from '../ThemeToggleButton';
 
-const LinkItem = ({ href, path, _target, children, ...props }) => {
+const LinkItem: React.FC<{
+  href: string;
+  path: string;
+  _target?: string;
+}> = ({ href, path, _target, children, ...props }) => {
   const active = path === href;
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900');
   return (
@@ -36,7 +39,7 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
   );
 };
 
-const Navbar = (props) => {
+const Navbar: React.FC<{ path: string }> = (props) => {
   const { path } = props;
 
   return (
@@ -83,14 +86,6 @@ const Navbar = (props) => {
           </LinkItem>
           <LinkItem href="/blog" path={path}>
             Blog
-          </LinkItem>
-          <LinkItem
-            href="/posts"
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-          >
-            <IoLogoGithub /> GitHub
           </LinkItem>
         </Stack>
 
