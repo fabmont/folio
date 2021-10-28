@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
-import Layout from '../components/Layout';
 import {
   Card,
   CardFooter,
@@ -10,6 +9,7 @@ import {
   TechBadge,
 } from '../styles/pages/work';
 import { firestore } from '../config/firebase';
+import Section from '../components/Section';
 
 interface FirebaseDataTypes {
   title: string;
@@ -43,7 +43,7 @@ const Work: React.FC = () => {
   }, []);
 
   return (
-    <Layout>
+    <Section>
       <Head>
         <title>Work • fabmont</title>
       </Head>
@@ -62,7 +62,7 @@ const Work: React.FC = () => {
           </Card>
         ))}
       </Container>
-    </Layout>
+    </Section>
   );
 };
 
