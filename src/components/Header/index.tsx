@@ -48,7 +48,7 @@ const Navbar: React.FC<{ path: string }> = (props) => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue('#ffffff40', '#20202380')}
+      bg={useColorModeValue('#ffffff30', '#27272b80')}
       style={{ backdropFilter: 'blur(10px)' }}
       zIndex={1}
       {...props}
