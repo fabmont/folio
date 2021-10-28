@@ -1,91 +1,34 @@
-import { useState, useEffect, createContext } from 'react';
-import { ThemeProvider } from 'styled-components';
+import Head from 'next/head';
+import { NextRouter } from 'next/router';
+import { Box, Container } from '@chakra-ui/react';
+import Header from '../Header';
+import Footer from '../Footer';
 
-import {
-  Container,
-  PageContent,
-  MenuBar,
-  MoonIcon,
-  SunIcon,
-  Footer,
-  FooterContainer,
-} from './styles';
-import theme from '../../styles/theme';
-import MenuLink from '../../components/Link';
+const Layout: React.FC<{ router: NextRouter }> = ({ children, router }) => (
+  <Box as="main" minH="100%">
+    <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Fabrício's homepage" />
+      <meta name="author" content="Fabrício Monteiro" />
+      <meta name="author" content="fabmont" />
+      <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@fabsmont" />
+      <meta name="twitter:creator" content="@fabsmont" />
+      <meta name="twitter:image" content="/card.png" />
+      <meta property="og:site_name" content="Fabrício Monteiro's Homepage" />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="/card.png" />
+      <title>Fabrício Monteiro - Homepage</title>
+    </Head>
 
-interface ThemeContextInterface {
-  darkModeActiveted: boolean;
-  toggleDarkMode: () => void;
-}
+    <Header path={router?.asPath} />
+    <Container maxW="container.md" pt={14}>
+      {children}
+      <Footer />
+    </Container>
+  </Box>
+);
 
-export const ThemeContext = createContext<ThemeContextInterface>({
-  darkModeActiveted: false,
-  toggleDarkMode: () => null,
-});
-
-export default function Layout({ children }) {
-  const [darkModeActiveted, setDarkModeActiveted] = useState<boolean>(false);
-  const { dark, light } = theme;
-
-  useEffect(() => {
-    if (localStorage && localStorage.getItem) {
-      const isDarkTheme = localStorage.getItem('darkMode') === 'true';
-      setDarkModeActiveted(isDarkTheme);
-    }
-  }, []);
-
-  const toggleDarkMode = () => {
-    setDarkModeActiveted((prev) => {
-      if (localStorage && localStorage.setItem) {
-        localStorage.setItem('darkMode', `${!prev}`);
-      }
-      return !prev;
-    });
-  };
-
-  const contextParams = {
-    darkModeActiveted,
-    toggleDarkMode,
-  };
-
-  return (
-    <ThemeContext.Provider value={contextParams}>
-      <ThemeProvider theme={darkModeActiveted ? dark : light}>
-        <Container>
-          <MenuBar>
-            <MenuLink
-              href="/"
-              className="menu-link"
-              activeClassName="menu-link-active"
-            >
-              Fabs
-            </MenuLink>
-            <MenuLink
-              href="/work"
-              className="menu-link"
-              activeClassName="menu-link-active"
-            >
-              Work
-            </MenuLink>
-            <MenuLink
-              href="/blog"
-              className="menu-link"
-              activeClassName="menu-link-active"
-            >
-              Blog
-            </MenuLink>
-            {darkModeActiveted ? (
-              <SunIcon onClick={toggleDarkMode} />
-            ) : (
-              <MoonIcon onClick={toggleDarkMode} />
-            )}
-          </MenuBar>
-          <PageContent>{children}</PageContent>
-          <Footer>
-            <FooterContainer>designed & developed by @fabmont</FooterContainer>
-          </Footer>
-        </Container>
-      </ThemeProvider>
-    </ThemeContext.Provider>
-  );
-}
+export default Layout;

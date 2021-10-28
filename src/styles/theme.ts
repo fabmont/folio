@@ -1,30 +1,49 @@
-import { darken } from 'polished';
+import { extendTheme } from '@chakra-ui/react';
+import { mode } from '@chakra-ui/theme-tools';
 
-export interface ThemeInterface {
-  primaryColor: string;
-  bodyBackground: string;
-  componentBackground: string;
-  textColor: string;
-  titleColor: string;
-  disabledColor: string;
-}
-
-const light = {
-  primaryColor: '#29c7ac',
-  bodyBackground: '#FFFFFF',
-  componentBackground: darken(0.07, '#FFF'),
-  textColor: '#1C1C1C',
-  titleColor: '#000',
-  disabledColor: '#F2F2F2',
+const styles = {
+  global: (props) => ({
+    body: {
+      bg: mode('#f0e7db', '#202023')(props),
+    },
+  }),
 };
 
-const dark = {
-  primaryColor: '#29c7ac',
-  bodyBackground: '#212529',
-  componentBackground: darken(0.01, '#212529'),
-  textColor: '#EAEBED',
-  titleColor: '#FFFFFF',
-  disabledColor: '#2b3036',
+const components = {
+  Heading: {
+    variants: {
+      'section-title': {
+        textDecoration: 'underline',
+        fontSize: 20,
+        textUnderlineOffset: 6,
+        textDecorationColor: '#525252',
+        textDecorationThickness: 4,
+        marginTop: 3,
+        marginBottom: 4,
+      },
+    },
+  },
+  Link: {
+    baseStyle: (props) => ({
+      color: mode('#3d7aed', '#ff63c3')(props),
+      textUnderlineOffset: 3,
+    }),
+  },
 };
 
-export default { light, dark };
+const fonts = {
+  heading: 'Nunito',
+};
+
+const colors = {
+  grassTeal: '#88ccca',
+};
+
+const config = {
+  initialColorMode: 'dark',
+  useSystemColorMode: true,
+};
+
+const theme = extendTheme({ config, styles, components, fonts, colors });
+
+export default theme;
