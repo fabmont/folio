@@ -9,6 +9,7 @@ import {
   ListItem,
   Button,
   Icon,
+  Divider,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import {
@@ -24,12 +25,13 @@ import timeline from '../constants/timeline';
 const Home: React.FC = () => (
   <div>
     <Container>
-      <Box display={{ md: 'flex' }} alignItems={{ md: 'center' }} my="12">
+      <Box display={{ md: 'flex' }} alignItems="center" my="8">
         <Box
           flexShrink={0}
           mt={{ base: 4, md: 0 }}
           mr={{ md: 6 }}
-          textAlign="center"
+          mb="4"
+          textAlign="start"
         >
           <Image
             borderColor="whiteAlpha.800"
@@ -39,7 +41,7 @@ const Home: React.FC = () => (
             display="inline-block"
             objectFit="cover"
             objectPosition="0 0"
-            borderRadius="full"
+            borderRadius="3xl"
             src="/me.jpg"
             alt="Profile image"
           />
@@ -52,14 +54,20 @@ const Home: React.FC = () => (
         </Box>
       </Box>
 
+      <Divider mb="8" />
+
       <Section delay="0.1">
         <Heading as="h3" variant="section-title">
           Hello!
         </Heading>
         <p>This is my fancy intro.</p>
-        <Box align="center" my={4}>
+        <Box align="end" my={4}>
           <NextLink href="/works">
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="blue">
+            <Button
+              rightIcon={<ChevronRightIcon />}
+              colorScheme="blue"
+              variant="outline"
+            >
               My portfolio
             </Button>
           </NextLink>
@@ -133,19 +141,13 @@ const Home: React.FC = () => (
           </ListItem>
         </List>
 
-        {/* <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
-          >
-            My YouTube channel
-          </GridItem>
-        </SimpleGrid> */}
-
-        <Box align="center" my={4}>
+        <Box align="end" my={4}>
           <NextLink href="/posts">
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="blue">
+            <Button
+              rightIcon={<ChevronRightIcon />}
+              colorScheme="blue"
+              variant="outline"
+            >
               Popular posts
             </Button>
           </NextLink>

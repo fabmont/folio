@@ -9,7 +9,7 @@ export interface TimelineItemInterface {
 const timeline: TimelineItemInterface[] = [
   {
     year: '1998',
-    description: 'Born in Brasília, Brazil.',
+    description: 'Born in Brasília, Brazil 🇧🇷',
   },
   {
     year: '2012',
@@ -62,8 +62,8 @@ const timeline: TimelineItemInterface[] = [
         >
           Appen
         </Link>
-        &apos;s projects as Software Engineer focused on frontend. Besides that,
-        came back to college to graduate in Systems Development. <br />
+        &apos;s projects as a Software Engineer focused on frontend. Besides
+        that, came back to college to graduate in Systems Development. <br />
         Also, started a YouTube channel to help begginers to find their way in
         the tech world.
       </>

@@ -28,8 +28,9 @@ const LinkItem: React.FC<{
     <NextLink href={href} passHref>
       <Link
         p={2}
-        bg={active ? 'grassTeal' : undefined}
-        color={active ? '#202023' : inactiveColor}
+        bg={active ? useColorModeValue('blue.100', 'blue.500') : undefined}
+        color={active ? 'text' : inactiveColor}
+        borderRadius="lg"
         _target={_target}
         {...props}
       >

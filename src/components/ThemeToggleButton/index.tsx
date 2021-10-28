@@ -20,6 +20,7 @@ const ThemeToggleButton: React.FC = () => {
           colorScheme={useColorModeValue('blue', 'yellow')}
           icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
           onClick={toggleColorMode}
+          variant="outline"
         />
       </motion.div>
     </AnimatePresence>

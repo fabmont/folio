@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-import Layout from '../components/Layout';
+import Section from '../components/Section';
 import { Container } from '../styles/pages';
 
 const Blog: React.FC = () => (
-  <Layout>
+  <Section>
     <Head>
       <title>blog • fabmont</title>
     </Head>
@@ -17,7 +17,7 @@ const Blog: React.FC = () => (
         height={430}
       />
     </Container>
-  </Layout>
+  </Section>
 );
 
 export default Blog;
