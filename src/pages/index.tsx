@@ -9,6 +9,7 @@ import {
   ListItem,
   Button,
   Icon,
+  Text,
   useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
@@ -67,8 +68,21 @@ const Home: React.FC = () => (
         <Heading as="h3" variant="section-title">
           Hello!
         </Heading>
-        <p>This is my fancy intro.</p>
-        <Box align="center" my={4}>
+        <Text>
+          I&apos;m Fabrício (but you can call me Fabs).
+          <br />I am a software engineer focused on frontend development. Since
+          I&apos;ve started coding, I&apos;ve found my passion with the{' '}
+          <b>JavaScript</b> and <b>React</b> world.
+          <br />I already worked for small businesses and big companies, which
+          gave me lots of experience on a bunch types of situations.
+          <br />
+          <br />I love to spend some time with my family, watch some movies/tv
+          shows, play my favorite songs on the guitar, and also I am always
+          reading about what&apos;s new in the tech world to be as much updated
+          as I can.
+        </Text>
+
+        <Box align="end" my={4}>
           <NextLink href="/work">
             <Button
               rightIcon={<ChevronRightIcon />}
@@ -148,7 +162,7 @@ const Home: React.FC = () => (
           </ListItem>
         </List>
 
-        <Box align="center" my={4}>
+        <Box align="end" my={4}>
           <NextLink href="/posts">
             <Button
               rightIcon={<ChevronRightIcon />}

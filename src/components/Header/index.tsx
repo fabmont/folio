@@ -29,7 +29,7 @@ const LinkItem: React.FC<{
     <NextLink href={href} passHref>
       <Link
         p={2}
-        bg={active ? useColorModeValue('blue.100', 'blue.500') : undefined}
+        bg={active ? useColorModeValue('#dbdbc8', 'gray.700') : undefined}
         color={active ? 'text' : inactiveColor}
         borderRadius="lg"
         _target={_target}
