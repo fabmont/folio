@@ -1,78 +1,182 @@
-import Head from 'next/head';
-import { Linkedin, Github, Instagram, Youtube } from 'styled-icons/fa-brands';
-import { Envelope } from 'styled-icons/fa-solid';
-
-import Layout from '../components/Layout';
+import { ChevronRightIcon } from '@chakra-ui/icons';
 import {
   Container,
-  MeImg,
-  TextContainer,
-  IconsContainer,
-} from '../styles/pages';
+  Box,
+  Heading,
+  Image,
+  Link,
+  List,
+  ListItem,
+  Button,
+  Icon,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
+import NextLink from 'next/link';
+import {
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoLogoInstagram,
+  IoLogoYoutube,
+} from 'react-icons/io5';
+import { BioSection, BioYear } from '../components/BioSection';
+import Section from '../components/Section';
+import timeline from '../constants/timeline';
 
 const Home: React.FC = () => (
-  <Layout>
-    <Head>
-      <title>Me • fabmont</title>
-    </Head>
+  <div>
     <Container>
-      <MeImg />
-      <TextContainer>
-        <h1>Olá!</h1>
-        <p>
-          Meu nome é <b>Fabrício Monteiro</b>, sou engenheiro de software com
-          especialidade em Javascript / NodeJS / React / React Native.
+      <Box
+        display={{ md: 'flex' }}
+        alignItems="center"
+        my="8"
+        pb="8"
+        borderBottom={`1px solid ${useColorModeValue(
+          '#00000020',
+          '#ffffff20',
+        )}`}
+      >
+        <Box
+          flexShrink={0}
+          mt={{ base: 4, md: 0 }}
+          mr={{ md: 6 }}
+          mb="4"
+          textAlign="center"
+        >
+          <Image
+            borderColor="whiteAlpha.800"
+            borderWidth={2}
+            borderStyle="solid"
+            maxWidth="100px"
+            display="inline-block"
+            objectFit="cover"
+            objectPosition="0 0"
+            borderRadius="3xl"
+            src="/me.jpg"
+            alt="Profile image"
+          />
+        </Box>
+        <Box flexGrow={1} textAlign={['center', 'start']}>
+          <Heading as="h2" variant="page-title">
+            Fabs
+          </Heading>
+          <p>Software Engineer ( JavaScript / React / Node.JS / Design )</p>
+        </Box>
+      </Box>
+
+      <Section delay="0.1">
+        <Heading as="h3" variant="section-title">
+          Hello!
+        </Heading>
+        <Text>
+          I&apos;m Fabrício (but you can call me Fabs).
+          <br />I am a software engineer focused on frontend development. Since
+          I&apos;ve started coding, I&apos;ve found my passion with the{' '}
+          <b>JavaScript</b> and <b>React</b> world.
+          <br />I already worked for small businesses and big companies, which
+          gave me lots of experience on a bunch types of situations.
           <br />
-          <br />
-          Adoro aprender e me propor novos desafios, com isso comecei a me
-          aventurar na tecnologia quando tinha 14 anos, buscando em guias,
-          tutoriais e cursos na web para criar pequenos programas e sistemas.
-          <br />
-          <br />
-          Minha paixão pela tecnologia me fez criar esse espaço, para
-          compartilhar minhas experiências, conhecimentos e interações com
-          vocês!
-        </p>
-        <IconsContainer>
-          <a
-            href="https://linkedin.com/in/fabmont"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="linkedin-icon"
-          >
-            <Linkedin size={30} />
-          </a>
-          <a
-            href="https://github.com/fabmont"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="github-icon"
-          >
-            <Github size={30} />
-          </a>
-          <a
-            href="https://instagram.com/fab_mont"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="instagram-icon"
-          >
-            <Instagram size={30} />
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UCiJHIHP-suKBwZnJRJ47fwA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="youtube-icon"
-          >
-            <Youtube size={30} />
-          </a>
-          <a href="mailto:fabriciosantos47@gmail.com" className="mail-icon">
-            <Envelope size={30} />
-          </a>
-        </IconsContainer>
-      </TextContainer>
+          <br />I love to spend some time with my family, watch some movies/tv
+          shows, play my favorite songs on the guitar, and also I am always
+          reading about what&apos;s new in the tech world to be as much updated
+          as I can.
+        </Text>
+
+        <Box align="end" my={4}>
+          <NextLink href="/work">
+            <Button
+              rightIcon={<ChevronRightIcon />}
+              colorScheme="blue"
+              variant="outline"
+            >
+              My portfolio
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
+
+      <Section delay="0.2">
+        <Heading as="h3" variant="section-title">
+          My journey
+        </Heading>
+
+        {timeline.map((item, idx) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <BioSection key={idx}>
+            <BioYear>{item.year}</BioYear>
+            {item.description}
+          </BioSection>
+        ))}
+      </Section>
+
+      <Section delay="0.3">
+        <Heading as="h3" variant="section-title">
+          Reach me!
+        </Heading>
+        <List>
+          <ListItem>
+            <Link href="https://github.com/fabmont" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="blue"
+                leftIcon={<Icon as={IoLogoGithub} />}
+              >
+                @fabmont
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://linkedin.com/in/fabmont" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="blue"
+                leftIcon={<Icon as={IoLogoLinkedin} />}
+              >
+                Fabrício Monteiro
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://instagram.com/fab_mont" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="blue"
+                leftIcon={<Icon as={IoLogoInstagram} />}
+              >
+                @fab_mont
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="https://www.youtube.com/channel/UCiJHIHP-suKBwZnJRJ47fwA"
+              target="_blank"
+            >
+              <Button
+                variant="ghost"
+                colorScheme="blue"
+                leftIcon={<Icon as={IoLogoYoutube} />}
+              >
+                Fabrício Monteiro
+              </Button>
+            </Link>
+          </ListItem>
+        </List>
+
+        <Box align="end" my={4}>
+          <NextLink href="/posts">
+            <Button
+              rightIcon={<ChevronRightIcon />}
+              colorScheme="blue"
+              variant="outline"
+            >
+              Popular posts
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
     </Container>
-  </Layout>
+  </div>
 );
 
 export default Home;

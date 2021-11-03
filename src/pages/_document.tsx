@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import { ColorModeScript } from '@chakra-ui/react';
 import Document, {
   DocumentContext,
   DocumentInitialProps,
@@ -7,6 +9,7 @@ import Document, {
   NextScript,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import theme from '../styles/theme';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -43,12 +46,13 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap"
             rel="stylesheet"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>
