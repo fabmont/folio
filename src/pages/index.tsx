@@ -100,8 +100,9 @@ const Home: React.FC = () => (
           My journey
         </Heading>
 
-        {timeline.map((item) => (
-          <BioSection>
+        {timeline.map((item, idx) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <BioSection key={idx}>
             <BioYear>{item.year}</BioYear>
             {item.description}
           </BioSection>
