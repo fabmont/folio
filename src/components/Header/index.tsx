@@ -50,7 +50,10 @@ const Navbar: React.FC<{ path: string }> = (props) => {
       as="nav"
       w="100%"
       bg={useColorModeValue('#dfdfcd82', '#27272b80')}
-      style={{ backdropFilter: 'blur(10px)' }}
+      style={{
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
+      }}
       zIndex={1}
       {...props}
     >
