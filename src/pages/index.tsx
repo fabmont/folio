@@ -9,7 +9,6 @@ import {
   ListItem,
   Button,
   Icon,
-  Text,
   useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
@@ -18,10 +17,19 @@ import {
   IoLogoLinkedin,
   IoLogoInstagram,
   IoLogoYoutube,
+  IoLogoTwitter,
 } from 'react-icons/io5';
 import { BioSection, BioYear } from '../components/BioSection';
 import Section from '../components/Section';
+import Paragraph from '../components/Paragraph';
 import timeline from '../constants/timeline';
+import {
+  githubUrl,
+  instagramUrl,
+  linkedinUrl,
+  twitterUrl,
+  youtubeUrl,
+} from '../constants/social-networks';
 
 const Home: React.FC = () => (
   <div>
@@ -68,28 +76,30 @@ const Home: React.FC = () => (
         <Heading as="h3" variant="section-title">
           Hello!
         </Heading>
-        <Text>
-          I&apos;m Fabrício (but you can call me Fabs).
-          <br />I am a software engineer focused on frontend development. Since
-          I&apos;ve started coding, I&apos;ve found my passion with the{' '}
-          <b>JavaScript</b> and <b>React</b> world.
-          <br />I already worked for small businesses and big companies, which
-          gave me lots of experience on a bunch types of situations.
-          <br />
-          <br />I love to spend some time with my family, watch some movies/tv
-          shows, play my favorite songs on the guitar, and also I am always
-          reading about what&apos;s new in the tech world to be as much updated
-          as I can.
-        </Text>
-
+        <Paragraph>
+          I&apos;m Fabrício (but you can call me Fabs). I am a software engineer
+          focused on frontend development. Since I&apos;ve started coding,
+          I&apos;ve found my passion with the <b>JavaScript</b> and <b>React</b>{' '}
+          world.
+        </Paragraph>
+        <Paragraph>
+          I already worked for small businesses and big companies, which gave me
+          lots of experience on a bunch types of situations.
+        </Paragraph>
+        <Paragraph>
+          I love to spend some time with my family, watch some movies/tv shows,
+          play my favorite songs on the guitar, and also I am always reading
+          about what&apos;s new in the tech world to be as much updated as I
+          can.
+        </Paragraph>
         <Box align="end" my={4}>
           <NextLink href="/work">
             <Button
               rightIcon={<ChevronRightIcon />}
               colorScheme="blue"
-              variant="outline"
+              variant="ghost"
             >
-              My portfolio
+              Check my work
             </Button>
           </NextLink>
         </Box>
@@ -115,7 +125,7 @@ const Home: React.FC = () => (
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/fabmont" target="_blank">
+            <Link href={githubUrl} target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="blue"
@@ -126,7 +136,7 @@ const Home: React.FC = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://linkedin.com/in/fabmont" target="_blank">
+            <Link href={linkedinUrl} target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="blue"
@@ -137,7 +147,7 @@ const Home: React.FC = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://instagram.com/fab_mont" target="_blank">
+            <Link href={instagramUrl} target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="blue"
@@ -148,10 +158,7 @@ const Home: React.FC = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link
-              href="https://www.youtube.com/channel/UCiJHIHP-suKBwZnJRJ47fwA"
-              target="_blank"
-            >
+            <Link href={youtubeUrl} target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="blue"
@@ -161,19 +168,18 @@ const Home: React.FC = () => (
               </Button>
             </Link>
           </ListItem>
+          <ListItem>
+            <Link href={twitterUrl} target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="blue"
+                leftIcon={<Icon as={IoLogoTwitter} />}
+              >
+                @fabsmont
+              </Button>
+            </Link>
+          </ListItem>
         </List>
-
-        <Box align="end" my={4}>
-          <NextLink href="/posts">
-            <Button
-              rightIcon={<ChevronRightIcon />}
-              colorScheme="blue"
-              variant="outline"
-            >
-              Popular posts
-            </Button>
-          </NextLink>
-        </Box>
       </Section>
     </Container>
   </div>

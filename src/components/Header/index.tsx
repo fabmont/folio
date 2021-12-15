@@ -91,9 +91,9 @@ const Navbar: React.FC<{ path: string }> = (props) => {
           <LinkItem href="/work" path={path}>
             Work
           </LinkItem>
-          <LinkItem href="/blog" path={path}>
+          {/* <LinkItem href="/blog" path={path}>
             Blog
-          </LinkItem>
+          </LinkItem> */}
         </Stack>
 
         <Box flex={1} align="right">
@@ -114,9 +114,9 @@ const Navbar: React.FC<{ path: string }> = (props) => {
                 <NextLink href="/work" passHref>
                   <MenuItem as={Link}>Work</MenuItem>
                 </NextLink>
-                <NextLink href="/blog" passHref>
+                {/* <NextLink href="/blog" passHref>
                   <MenuItem as={Link}>Blog</MenuItem>
-                </NextLink>
+                </NextLink> */}
               </MenuList>
             </Menu>
           </Box>
