@@ -4,9 +4,11 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Container,
+  Divider,
   Heading,
   Image,
   Text,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { GetStaticPathsResult, GetStaticPropsResult } from 'next';
 import Head from 'next/head';
@@ -18,6 +20,7 @@ import matter from 'gray-matter';
 import { marked } from 'marked';
 
 import Section from '../../components/Section';
+import PostBody from './[slug].styles';
 
 interface StaticPaths {
   params: { slug: string };
@@ -123,16 +126,6 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
         </Breadcrumb>
 
         <Section>
-          <Heading fontSize="3xl" mt="4" mb="2">
-            {title}
-          </Heading>
-
-          <Text>{subtitle}</Text>
-
-          <Text opacity={0.6} mt="2" mb="4">
-            {author}&nbsp;&nbsp;•&nbsp;&nbsp;{date}
-          </Text>
-
           <Image
             src={coverImage}
             width="full"
@@ -140,10 +133,24 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
             objectFit="cover"
             borderRadius="md"
           />
+          <Heading fontSize="3xl" mt="4">
+            {title}
+          </Heading>
+
+          <Text opacity={0.6} my="2">
+            {author}&nbsp;&nbsp;•&nbsp;&nbsp;{date}
+          </Text>
+
+          <Text>{subtitle}</Text>
         </Section>
 
+        <Divider
+          borderColor={useColorModeValue('gray.400', 'gray.600')}
+          my="4"
+        />
+
         <Section delay="0.3">
-          <Box dangerouslySetInnerHTML={{ __html: marked(content) }} />
+          <PostBody dangerouslySetInnerHTML={{ __html: marked(content) }} />
         </Section>
       </Box>
     </Container>
