@@ -68,7 +68,7 @@ const Home: React.FC = () => (
           <Heading as="h2" variant="page-title">
             Fabs
           </Heading>
-          <p>Software Engineer ( JavaScript / React / Node.JS / Design )</p>
+          <p>Software Engineer (JavaScript / React / Node.JS / Design)</p>
         </Box>
       </Box>
 
@@ -83,7 +83,7 @@ const Home: React.FC = () => (
           world.
         </Paragraph>
         <Paragraph>
-          I already worked for small businesses and big companies, which gave me
+          I&apos;ve already worked for small and big companies, which gave me
           lots of experience on a bunch types of situations.
         </Paragraph>
         <Paragraph>
@@ -92,12 +92,12 @@ const Home: React.FC = () => (
           about what&apos;s new in the tech world to be as much updated as I
           can.
         </Paragraph>
-        <Box align="end" my={4}>
+        <Box align="center" my={4}>
           <NextLink href="/work">
             <Button
               rightIcon={<ChevronRightIcon />}
               colorScheme="blue"
-              variant="ghost"
+              variant="outline"
             >
               Check my work
             </Button>

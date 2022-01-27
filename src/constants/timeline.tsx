@@ -69,8 +69,7 @@ const timeline: TimelineItemInterface[] = [
         <Link href="https://cornershopapp.com/" target="_blank">
           Cornershop by Uber
         </Link>
-        &nbsp;leading the frontend development of a backoffice tools made with{' '}
-        <b>React</b>.
+        &nbsp;owning some backoffice projects made with <b>React</b>.
       </>
     ),
   },
