@@ -88,7 +88,7 @@ export function getStaticProps(
 
 const BlogPost: React.FC<BlogPostProps> = (props) => {
   const {
-    frontmatter: { title, coverImage, author, date, subtitle },
+    frontmatter: { title, coverImage, author, date, subtitle, slug },
     content,
   } = props;
 
@@ -96,7 +96,29 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
     <Container>
       <Head>
         <title>{title} - Fabrício Monteiro</title>
+        <meta name="title" content={`${title} - Fabrício Monteiro`} />
         <meta name="description" content={subtitle} />
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={`https://fabmont.vercel.app/blog/${slug}`}
+        />
+        <meta property="og:title" content={`${title} - Fabrício Monteiro`} />
+        <meta property="og:description" content={subtitle} />
+        <meta property="og:image" content={coverImage} />
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content={`https://fabmont.vercel.app/blog/${slug}`}
+        />
+        <meta
+          property="twitter:title"
+          content={`${title} - Fabrício Monteiro`}
+        />
+        <meta property="twitter:description" content={subtitle} />
+        <meta property="twitter:image" content={coverImage} />
       </Head>
 
       <Box mt="8">
