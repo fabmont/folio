@@ -88,8 +88,6 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
     content,
   } = props;
 
-  console.log(marked(content));
-
   return (
     <Container>
       <Head>
