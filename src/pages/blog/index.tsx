@@ -77,8 +77,8 @@ const Blog: React.FC<StaticProps> = ({ posts }) => (
         {posts.map(({ title, slug, author, date, subtitle }) => (
           <NextLink href={`/blog/${slug}`} key={slug}>
             <Box
-              p="1"
-              bgGradient="linear(to-r, blue.200, teal.400)"
+              p="0.5"
+              bgGradient="linear(to-r, blue.300, blue.400, blue.200)"
               borderRadius="lg"
               cursor="pointer"
             >

@@ -8,6 +8,7 @@ import {
   Heading,
   Image,
   Text,
+  theme,
   useColorModeValue,
 } from '@chakra-ui/react';
 import { GetStaticPathsResult, GetStaticPropsResult } from 'next';
@@ -150,7 +151,10 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
         />
 
         <Section delay="0.3">
-          <PostBody dangerouslySetInnerHTML={{ __html: marked(content) }} />
+          <PostBody
+            theme={theme}
+            dangerouslySetInnerHTML={{ __html: marked(content) }}
+          />
         </Section>
       </Box>
     </Container>
