@@ -13,7 +13,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-import Section from '../components/Section';
+import Section from '../../components/Section';
 
 interface Posts {
   slug: string;
@@ -54,7 +54,10 @@ export function getStaticProps(): GetStaticPropsResult<StaticProps> {
 
   return {
     props: {
-      posts,
+      posts: posts.sort(
+        (prev, next) =>
+          new Date(next.date).getTime() - new Date(prev.date).getTime(),
+      ),
     },
   };
 }
