@@ -30,7 +30,7 @@ const LinkItem: React.FC<{
       <Link
         p={2}
         bg={active ? useColorModeValue('#dbdbc8', 'gray.700') : undefined}
-        color={active ? 'text' : inactiveColor}
+        color={active ? 'unset' : inactiveColor}
         borderRadius="lg"
         _target={_target}
         {...props}

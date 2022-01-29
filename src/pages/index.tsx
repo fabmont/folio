@@ -10,6 +10,7 @@ import {
   Button,
   Icon,
   useColorModeValue,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import {
@@ -123,63 +124,57 @@ const Home: React.FC = () => (
         <Heading as="h3" variant="section-title">
           Reach me!
         </Heading>
-        <List>
-          <ListItem>
-            <Link href={githubUrl} target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="blue"
-                leftIcon={<Icon as={IoLogoGithub} />}
-              >
-                @fabmont
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href={linkedinUrl} target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="blue"
-                leftIcon={<Icon as={IoLogoLinkedin} />}
-              >
-                Fabrício Monteiro
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href={instagramUrl} target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="blue"
-                leftIcon={<Icon as={IoLogoInstagram} />}
-              >
-                @fab_mont
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href={youtubeUrl} target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="blue"
-                leftIcon={<Icon as={IoLogoYoutube} />}
-              >
-                Fabrício Monteiro
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href={twitterUrl} target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="blue"
-                leftIcon={<Icon as={IoLogoTwitter} />}
-              >
-                @fabsmont
-              </Button>
-            </Link>
-          </ListItem>
-        </List>
+        <SimpleGrid columns={[1, 2, 3]} spacing={['4', '2']}>
+          <Link href={githubUrl} target="_blank">
+            <Button
+              variant="link"
+              colorScheme="blue"
+              leftIcon={<Icon as={IoLogoGithub} />}
+            >
+              @fabmont
+            </Button>
+          </Link>
+
+          <Link href={linkedinUrl} target="_blank">
+            <Button
+              variant="link"
+              colorScheme="blue"
+              leftIcon={<Icon as={IoLogoLinkedin} />}
+            >
+              Fabrício Monteiro
+            </Button>
+          </Link>
+
+          <Link href={instagramUrl} target="_blank">
+            <Button
+              variant="link"
+              colorScheme="blue"
+              leftIcon={<Icon as={IoLogoInstagram} />}
+            >
+              @fab_mont
+            </Button>
+          </Link>
+
+          <Link href={youtubeUrl} target="_blank">
+            <Button
+              variant="link"
+              colorScheme="blue"
+              leftIcon={<Icon as={IoLogoYoutube} />}
+            >
+              Fabrício Monteiro
+            </Button>
+          </Link>
+
+          <Link href={twitterUrl} target="_blank">
+            <Button
+              variant="link"
+              colorScheme="blue"
+              leftIcon={<Icon as={IoLogoTwitter} />}
+            >
+              @fabsmont
+            </Button>
+          </Link>
+        </SimpleGrid>
       </Section>
     </Container>
   </div>
