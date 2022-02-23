@@ -28,7 +28,7 @@ const Footer: React.FC = () => (
         justifyContent="flex-start"
         textAlign="left"
         spacing="4"
-        columns={[1, 2]}
+        columns={2}
       >
         <List spacing="4">
           <Text opacity={0.4}>Site</Text>
@@ -121,7 +121,7 @@ const Footer: React.FC = () => (
           </ListItem>
         </List>
       </SimpleGrid>
-      <Text w="100%" mt="12" opacity={0.6}>
+      <Text w="100%" mt="12" opacity={0.2} textAlign="center">
         fabmont &copy; {new Date().getFullYear()}. All Rights Reserved.
       </Text>
     </Box>
