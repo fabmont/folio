@@ -31,6 +31,7 @@ const Footer: React.FC = () => (
         columns={[1, 2]}
       >
         <List spacing="4">
+          <Text opacity={0.4}>Site</Text>
           <ListItem>
             <NextLink href="/" passHref>
               <Link
@@ -67,6 +68,7 @@ const Footer: React.FC = () => (
         </List>
 
         <List spacing="4">
+          <Text opacity={0.4}>Social</Text>
           <ListItem>
             <Link
               href={githubUrl}
@@ -104,7 +106,7 @@ const Footer: React.FC = () => (
               color={useColorModeValue('#424242', '#fdfdfd')}
               isExternal
             >
-              YouTube channel
+              YouTube
             </Link>
           </ListItem>
           <ListItem>

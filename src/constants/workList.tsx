@@ -1,4 +1,4 @@
-import { Badge, Link } from '@chakra-ui/react';
+import { Badge, Link, ListItem, UnorderedList } from '@chakra-ui/react';
 import Paragraph from '../components/Paragraph';
 
 const workList = [
@@ -94,19 +94,29 @@ const workList = [
     description: (
       <>
         <Paragraph>
-          I joined the Cornershop team to work as a frontend engineer. I&apos;ve
-          worked on more than 4 projects there and owning some of them, from
-          MVPs to big internal tools.
+          I’ve worked as a frontend software engineer at Cornershop using the
+          React ecosystem with JavaScript and TypeScript, helping lots of squads
+          inside the company. Some of my contributions there was:
         </Paragraph>
-        <Paragraph>
-          I was able to learn a lot about software development best practices;
-          interact with other culture (most of Cornershop engineers are from
-          Chile); experience owning projects; maintain libraries and tools and
-          so on.
-        </Paragraph>
-        <Paragraph>
-          I also experienced the incorporation of Cornershop inside <b>Uber</b>.
-        </Paragraph>
+        <UnorderedList>
+          <ListItem>
+            Worked at the Inventory team and helped building the campaigns and
+            sample products app from scratch to production.
+          </ListItem>
+          <ListItem>
+            Contributed developing and maintaining the Shopper support platform
+            inside the Quality team.
+          </ListItem>
+          <ListItem>
+            Helped developing new features for the Shopper Center platform,
+            which is the main app Shoppers use to manage their journey inside
+            Cornershop.
+          </ListItem>
+          <ListItem>
+            Helped reviewing PRs from different squads and contributed writing
+            and doing talks for the frontend team.
+          </ListItem>
+        </UnorderedList>
       </>
     ),
     imgUrl:
