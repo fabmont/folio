@@ -53,7 +53,7 @@ const workList = [
       </>
     ),
     imgUrl:
-      'https://media-exp1.licdn.com/dms/image/C4E0BAQHOmyc1ZwZ_cg/company-logo_100_100/0/1526419523058?e=1651104000&v=beta&t=98LtBRdw8tSPbhkRVgHsUzhBK-i5dB8AMSLboRSwMj0',
+      'https://media-exp1.licdn.com/dms/image/C4E0BAQHOmyc1ZwZ_cg/company-logo_100_100/0/1526419523058?e=1660176000&v=beta&t=_nqZd-aM1WrNbfNsRGsX1Gr20n7hm0sjuEaankIVjXg',
     role: 'Software Engineer, Frontend & Mobile',
     date: 'October 2018 - July 2020',
   },
@@ -84,7 +84,7 @@ const workList = [
       </>
     ),
     imgUrl:
-      'https://media-exp1.licdn.com/dms/image/C560BAQHUHJih-Ly1ug/company-logo_100_100/0/1587035438283?e=1651104000&v=beta&t=KDmwr_7OX6u-uG3kiX6CEhn8IejF3bD1dyUy3eMq34Y',
+      'https://media-exp1.licdn.com/dms/image/C560BAQHUHJih-Ly1ug/company-logo_100_100/0/1587035438283?e=1660176000&v=beta&t=kNYd09UNI1DG-GyxV-nkiAYVBts0Hq1nFHEMmxTR5No',
     role: 'Software Engineer, Frontend',
     date: 'July 2020 - April 2021',
   },
@@ -120,7 +120,7 @@ const workList = [
       </>
     ),
     imgUrl:
-      'https://media-exp1.licdn.com/dms/image/C4D0BAQHwjB0czoh0dQ/company-logo_100_100/0/1625585613746?e=1651104000&v=beta&t=OJZNMmUF6MBMgZt9p5Uw8Y1MzyAhKnDKrIlQFhnXeh8',
+      'https://media-exp1.licdn.com/dms/image/C4D0BAQHwjB0czoh0dQ/company-logo_100_100/0/1625585613746?e=1660176000&v=beta&t=CjYkwlLMMcaWAf4oR1f7q2M5R2uHXjTAiw1dccs9EnE',
     role: 'Software Engineer, Frontend',
     date: 'April 2021 - today',
   },
