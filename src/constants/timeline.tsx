@@ -62,14 +62,28 @@ const timeline: TimelineItemInterface[] = [
     ),
   },
   {
-    year: '2021-now',
+    year: '2021',
     description: (
       <>
-        Works as a Frontend Engineer at{' '}
+        Started to work at{' '}
         <Link href="https://cornershopapp.com/" target="_blank">
           Cornershop by Uber
-        </Link>
-        &nbsp;owning some backoffice projects made with <b>React</b>.
+        </Link>{' '}
+        as a frontend software engineer owning some backoffice projects made
+        with <b>React</b>.
+      </>
+    ),
+  },
+  {
+    year: '2022-now',
+    description: (
+      <>
+        Joined the{' '}
+        <Link href="https://contentfly.com/" target="_blank">
+          Contentfly
+        </Link>{' '}
+        team to work focusing on the platform growth, working as a software
+        engineer using <b>Node.JS</b> and <b>Vue.JS</b>
       </>
     ),
   },
