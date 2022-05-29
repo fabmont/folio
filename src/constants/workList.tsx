@@ -122,7 +122,23 @@ const workList = [
     imgUrl:
       'https://media-exp1.licdn.com/dms/image/C4D0BAQHwjB0czoh0dQ/company-logo_100_100/0/1625585613746?e=1660176000&v=beta&t=CjYkwlLMMcaWAf4oR1f7q2M5R2uHXjTAiw1dccs9EnE',
     role: 'Software Engineer, Frontend',
-    date: 'April 2021 - today',
+    date: 'April 2021 - May 2022',
+  },
+  {
+    url: 'https://contentfly.com',
+    title: 'Contentfly',
+    description: (
+      <>
+        <Paragraph>
+          Working at the Growth team as a software engineer using NodeJS, VueJS
+          and SequelizeORM.
+        </Paragraph>
+      </>
+    ),
+    imgUrl:
+      'https://media-exp1.licdn.com/dms/image/C4E0BAQHiOPNPn_Kolw/company-logo_200_200/0/1626701926217?e=1661990400&v=beta&t=q8MfnP4xChjLgnh_51J5BJSGVZFuOIMSYfQuxbnGnvw',
+    role: 'Software Engineer',
+    date: 'May 2022 - today',
   },
 ];
 
