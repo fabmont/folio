@@ -1,35 +1,7 @@
-import { Badge, Link, ListItem, UnorderedList } from '@chakra-ui/react';
+import { Link, ListItem, UnorderedList } from '@chakra-ui/react';
 import Paragraph from '../components/Paragraph';
 
 const workList = [
-  {
-    url: null,
-    title: 'Onde Joga?',
-    description: (
-      <>
-        <Badge colorScheme="red">No longer active</Badge>
-        <Paragraph>
-          This was a project I had the pleasure to be part of during my
-          graduation in Software Engineering. With this project I had my first
-          contact with React Native (and after React.js).
-        </Paragraph>
-        <Paragraph>
-          &quot;Onde Joga?&quot; or <i>&quot;Where I throw away?&quot;</i> was
-          an app that allowed users to report trash on streets. With that the
-          government authorities could see where they needed to put efforts to
-          clean up the street trash.
-        </Paragraph>
-        <Paragraph>
-          With this project I could study technologies such as React, React
-          Native, JavaScript, Firebase, CSS and Redux.
-        </Paragraph>
-      </>
-    ),
-    imgUrl:
-      'https://greenvolt.com.br/wp-content/uploads/2018/05/ef3-placeholder-image.jpg',
-    role: 'Software Engineer, Mobile',
-    date: 'March 2018 - July 2018',
-  },
   {
     url: 'https://coopersystem.com.br',
     title: 'Coopersystem',
@@ -52,10 +24,9 @@ const workList = [
         </Paragraph>
       </>
     ),
-    imgUrl:
-      'https://media-exp1.licdn.com/dms/image/C4E0BAQHOmyc1ZwZ_cg/company-logo_100_100/0/1526419523058?e=1660176000&v=beta&t=_nqZd-aM1WrNbfNsRGsX1Gr20n7hm0sjuEaankIVjXg',
     role: 'Software Engineer, Frontend & Mobile',
-    date: 'October 2018 - July 2020',
+    date: 'Oct 2018 - Jul 2020',
+    technologies: ['JavaScript', 'ReactJS', 'React Native'],
   },
   {
     url: 'https://appen.com',
@@ -83,10 +54,16 @@ const workList = [
         </Paragraph>
       </>
     ),
-    imgUrl:
-      'https://media-exp1.licdn.com/dms/image/C560BAQHUHJih-Ly1ug/company-logo_100_100/0/1587035438283?e=1660176000&v=beta&t=kNYd09UNI1DG-GyxV-nkiAYVBts0Hq1nFHEMmxTR5No',
-    role: 'Software Engineer, Frontend',
-    date: 'July 2020 - April 2021',
+    role: 'Frontend Software Engineer',
+    date: 'Jul 2020 - Apr 2021',
+    technologies: [
+      'JavaScript',
+      'TypeScript',
+      'ReactJS',
+      'Redux/Sagas',
+      'Storybook',
+      'Monorepo',
+    ],
   },
   {
     url: 'https://cornershopapp.com',
@@ -119,14 +96,13 @@ const workList = [
         </UnorderedList>
       </>
     ),
-    imgUrl:
-      'https://media-exp1.licdn.com/dms/image/C4D0BAQHwjB0czoh0dQ/company-logo_100_100/0/1625585613746?e=1660176000&v=beta&t=CjYkwlLMMcaWAf4oR1f7q2M5R2uHXjTAiw1dccs9EnE',
-    role: 'Software Engineer, Frontend',
-    date: 'April 2021 - May 2022',
+    role: 'Frontend Software Engineer',
+    date: 'Apr 2021 - May 2022',
+    technologies: ['JavaScript', 'TypeScript', 'ReactJS', 'Storybook'],
   },
   {
-    url: 'https://contentfly.com',
-    title: 'Contentfly',
+    url: 'https://draft.co',
+    title: 'Draft',
     description: (
       <>
         <Paragraph>
@@ -135,10 +111,15 @@ const workList = [
         </Paragraph>
       </>
     ),
-    imgUrl:
-      'https://media-exp1.licdn.com/dms/image/C4E0BAQHiOPNPn_Kolw/company-logo_200_200/0/1626701926217?e=1661990400&v=beta&t=q8MfnP4xChjLgnh_51J5BJSGVZFuOIMSYfQuxbnGnvw',
-    role: 'Software Engineer',
-    date: 'May 2022 - today',
+    role: 'Full Stack Software Engineer',
+    date: 'May 2022 - Nov 2022',
+    technologies: [
+      'JavaScript',
+      'VueJS',
+      'NodeJS',
+      'SequelizeORM',
+      'Storybook',
+    ],
   },
 ];
 

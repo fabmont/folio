@@ -15,7 +15,7 @@ const timeline: TimelineItemInterface[] = [
     year: '2012',
     description: (
       <>
-        Started to write your first lines of code with <b>C#</b> and{' '}
+        Started to write my first lines of code with <b>C#</b> and{' '}
         <b>Visual Basic</b>. Also started a &quot;company&quot; called{' '}
         <b>Vault Computer</b> with a school friend.
       </>
@@ -24,7 +24,7 @@ const timeline: TimelineItemInterface[] = [
   {
     year: '2017',
     description:
-      'Started to study Software Engineering at Universidade de Brasília. But dropped out in late 2019 to focus on his career.',
+      'Started to study Software Engineering at Universidade de Brasília. But dropped out in late 2019 to focus on my career.',
   },
   {
     year: '2018',
@@ -56,7 +56,7 @@ const timeline: TimelineItemInterface[] = [
         </Link>
         &apos;s projects as a Software Engineer focused on frontend. Besides
         that, came back to college to graduate in Systems Development. <br />
-        Also, started a YouTube channel to help begginers to find their way in
+        Also, I started a YouTube channel to help begginers to find their way in
         the tech world.
       </>
     ),
@@ -79,11 +79,11 @@ const timeline: TimelineItemInterface[] = [
     description: (
       <>
         Joined the{' '}
-        <Link href="https://contentfly.com/" target="_blank">
-          Contentfly
+        <Link href="https://draft.co/" target="_blank">
+          Draft
         </Link>{' '}
-        team to work focusing on the platform growth, working as a software
-        engineer using <b>Node.JS</b> and <b>Vue.JS</b>
+        team to work on the customer/writer focused squads, working as a
+        software engineer using <b>Node.JS</b> and <b>Vue.JS</b>
       </>
     ),
   },

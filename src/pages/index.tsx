@@ -5,8 +5,6 @@ import {
   Heading,
   Image,
   Link,
-  List,
-  ListItem,
   Button,
   Icon,
   useColorModeValue,
