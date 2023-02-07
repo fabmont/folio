@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "engines": {
-    "node": ">=16.x"
+    "node": ">=18.x"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.16",
