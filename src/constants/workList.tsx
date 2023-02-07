@@ -54,7 +54,7 @@ const workList = [
         </Paragraph>
       </>
     ),
-    role: 'Frontend Software Engineer',
+    role: 'Software Engineer, Frontend',
     date: 'Jul 2020 - Apr 2021',
     technologies: [
       'JavaScript',
@@ -96,7 +96,7 @@ const workList = [
         </UnorderedList>
       </>
     ),
-    role: 'Frontend Software Engineer',
+    role: 'Software Engineer, Frontend',
     date: 'Apr 2021 - May 2022',
     technologies: ['JavaScript', 'TypeScript', 'ReactJS', 'Storybook'],
   },
@@ -111,13 +111,32 @@ const workList = [
         </Paragraph>
       </>
     ),
-    role: 'Full Stack Software Engineer',
+    role: 'Software Engineer, Full Stack',
     date: 'May 2022 - Nov 2022',
     technologies: [
       'JavaScript',
       'VueJS',
       'NodeJS',
       'SequelizeORM',
+      'Storybook',
+    ],
+  },
+  {
+    url: 'https://flieber.com',
+    title: 'Flieber, Inc',
+    description: (
+      <>
+        <Paragraph>
+          Working at the frontend team to implement new features for the app, fix bugs and maintain our codebase.
+        </Paragraph>
+      </>
+    ),
+    role: 'Software Engineer, Frontend',
+    date: 'Feb 2023 - now',
+    technologies: [
+      'TypeScript',
+      'ReactJS',
+      'Jest + React Testing Library',
       'Storybook',
     ],
   },
