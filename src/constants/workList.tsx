@@ -101,8 +101,8 @@ const workList = [
     technologies: ['JavaScript', 'TypeScript', 'ReactJS', 'Storybook'],
   },
   {
-    url: 'https://draft.co',
-    title: 'Draft',
+    url: 'https://maker.ai',
+    title: 'MakerAI (formerly Draft)',
     description: (
       <>
         <Paragraph>
