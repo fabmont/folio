@@ -33,37 +33,34 @@ const Footer: React.FC = () => (
         <List spacing="4">
           <Text opacity={0.4}>Site</Text>
           <ListItem>
-            <NextLink href="/" passHref>
-              <Link
-                href="/"
-                fontWeight="bold"
-                color={useColorModeValue('#424242', '#fdfdfd')}
-              >
-                Home
-              </Link>
-            </NextLink>
+            <Link
+              as={NextLink}
+              href="/"
+              fontWeight="bold"
+              color={useColorModeValue('#424242', '#fdfdfd')}
+            >
+              Home
+            </Link>
           </ListItem>
           <ListItem>
-            <NextLink href="/work">
-              <Link
-                href="/work"
-                fontWeight="bold"
-                color={useColorModeValue('#424242', '#fdfdfd')}
-              >
-                Work
-              </Link>
-            </NextLink>
+            <Link
+              as={NextLink}
+              href="/work"
+              fontWeight="bold"
+              color={useColorModeValue('#424242', '#fdfdfd')}
+            >
+              Work
+            </Link>
           </ListItem>
           <ListItem>
-            <NextLink href="/blog">
-              <Link
-                href="/blog"
-                fontWeight="bold"
-                color={useColorModeValue('#424242', '#fdfdfd')}
-              >
-                Blog
-              </Link>
-            </NextLink>
+            <Link
+              as={NextLink}
+              href="/blog"
+              fontWeight="bold"
+              color={useColorModeValue('#424242', '#fdfdfd')}
+            >
+              Blog
+            </Link>
           </ListItem>
         </List>
 

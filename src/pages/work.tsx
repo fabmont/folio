@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import Head from 'next/head';
 import { Box, Text, Container, Link, Heading, Badge } from '@chakra-ui/react';
 
@@ -27,8 +28,8 @@ const Work: React.FC = () => (
             </Link>{' '}
             • {item.date}
           </Text>
-          {item.technologies.map((tech) => (
-            <Badge colorScheme="twitter" mr="2">
+          {item.technologies.map((tech, index) => (
+            <Badge key={`${tech}-${index}`} colorScheme="twitter" mr="2">
               {tech}
             </Badge>
           ))}

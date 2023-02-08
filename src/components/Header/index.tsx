@@ -7,7 +7,6 @@ import {
   Heading,
   Flex,
   Menu,
-  MenuItem,
   MenuList,
   IconButton,
   MenuButton,
@@ -22,22 +21,21 @@ const LinkItem: React.FC<{
   href: string;
   path: string;
   _target?: string;
-}> = ({ href, path, _target, children, ...props }) => {
+}> = ({ href, path, children, ...props }) => {
   const active = path === href;
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900');
   return (
-    <NextLink href={href} passHref>
-      <Link
-        p={2}
-        bg={active ? useColorModeValue('#dbdbc8', 'gray.700') : undefined}
-        color={active ? 'unset' : inactiveColor}
-        borderRadius="lg"
-        _target={_target}
-        {...props}
-      >
-        {children}
-      </Link>
-    </NextLink>
+    <Link
+      as={NextLink}
+      href={href}
+      p={2}
+      bg={active ? useColorModeValue('#dbdbc8', 'gray.700') : undefined}
+      color={active ? 'unset' : inactiveColor}
+      borderRadius="lg"
+      {...props}
+    >
+      {children}
+    </Link>
   );
 };
 
@@ -108,15 +106,9 @@ const Navbar: React.FC<{ path: string }> = (props) => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>Home</MenuItem>
-                </NextLink>
-                <NextLink href="/work" passHref>
-                  <MenuItem as={Link}>Work</MenuItem>
-                </NextLink>
-                <NextLink href="/blog" passHref>
-                  <MenuItem as={Link}>Blog</MenuItem>
-                </NextLink>
+                <NextLink href="/">Home</NextLink>
+                <NextLink href="/work">Work</NextLink>
+                <NextLink href="/blog">Blog</NextLink>
               </MenuList>
             </Menu>
           </Box>

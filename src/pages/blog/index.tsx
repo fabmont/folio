@@ -81,8 +81,7 @@ const Blog: React.FC<StaticProps> = ({ posts }) => (
               bgGradient="linear(to-r, blue.300, blue.400, blue.200)"
               borderRadius="lg"
               cursor="pointer"
-              mb="4"
-              _last={{ mb: 0 }}
+              margin="0 0 8px 0"
             >
               <Box
                 p="4"
