@@ -1,4 +1,4 @@
-import { Box, Link, Stack, Text, theme, useTheme } from '@chakra-ui/react';
+import { Box, Link, Stack, Text, theme } from '@chakra-ui/react';
 import { FaSpotify } from 'react-icons/fa';
 import useSWR from 'swr';
 import fetcher from '../../services/fetcher';

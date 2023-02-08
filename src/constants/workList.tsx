@@ -127,7 +127,8 @@ const workList = [
     description: (
       <>
         <Paragraph>
-          Working at the frontend team to implement new features for the app, fix bugs and maintain our codebase.
+          Working at the frontend team to implement new features for the app,
+          fix bugs and maintain our codebase.
         </Paragraph>
       </>
     ),
