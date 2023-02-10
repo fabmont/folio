@@ -28,11 +28,6 @@ const Work: React.FC = () => (
             </Link>{' '}
             • {item.date}
           </Text>
-          {item.technologies.map((tech, index) => (
-            <Badge key={`${tech}-${index}`} colorScheme="twitter" mr="2">
-              {tech}
-            </Badge>
-          ))}
         </Box>
       ))}
     </Section>
