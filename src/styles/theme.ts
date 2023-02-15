@@ -32,7 +32,7 @@ const components = {
 };
 
 const fonts = {
-  heading: 'Nunito',
+  heading: 'Space Grotesk',
 };
 
 const colors = {

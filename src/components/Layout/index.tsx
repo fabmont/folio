@@ -24,7 +24,7 @@ const Layout: React.FC<{ router: NextRouter }> = ({ children, router }) => (
     </Head>
 
     <Header path={router?.asPath} />
-    <Container maxW="container.md" pt={14}>
+    <Container maxW="container.md">
       {children}
       <Footer />
     </Container>

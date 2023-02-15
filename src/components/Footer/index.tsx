@@ -118,8 +118,8 @@ const Footer: React.FC = () => (
           </ListItem>
         </List>
       </SimpleGrid>
-      <Text w="100%" mt="12" opacity={0.2} textAlign="center">
-        fabmont &copy; {new Date().getFullYear()}. All Rights Reserved.
+      <Text w="100%" mt="12" opacity={0.2}>
+        Fabrício Monteiro &copy; {new Date().getFullYear()}
       </Text>
     </Box>
   </>

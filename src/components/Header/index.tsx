@@ -44,7 +44,8 @@ const Navbar: React.FC<{ path: string }> = (props) => {
 
   return (
     <Box
-      position="fixed"
+      position="sticky"
+      top={0}
       as="nav"
       w="100%"
       bg={useColorModeValue('#dfdfcd82', '#27272b80')}

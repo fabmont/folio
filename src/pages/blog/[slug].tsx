@@ -93,7 +93,7 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
   } = props;
 
   return (
-    <Container>
+    <Container maxW="full">
       <Head>
         <title>{title} - Fabrício Monteiro</title>
         <meta name="title" content={`${title} - Fabrício Monteiro`} />

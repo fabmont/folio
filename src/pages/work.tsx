@@ -6,7 +6,7 @@ import Section from '../components/Section';
 import workList from '../constants/workList';
 
 const Work: React.FC = () => (
-  <Container>
+  <Container maxW="full">
     <Head>
       <title>Fabrício Monteiro - Work</title>
     </Head>

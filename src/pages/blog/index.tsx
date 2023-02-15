@@ -63,7 +63,7 @@ export function getStaticProps(): GetStaticPropsResult<StaticProps> {
 }
 
 const Blog: React.FC<StaticProps> = ({ posts }) => (
-  <Container>
+  <Container maxW="full">
     <Head>
       <title>Fabrício Monteiro - Blog</title>
     </Head>
