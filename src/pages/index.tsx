@@ -1,27 +1,23 @@
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import {
-  Container,
   Box,
-  Heading,
-  Image,
-  Link,
   Button,
+  Container,
+  Heading,
   Icon,
-  useColorModeValue,
+  Link,
   SimpleGrid,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { FaXTwitter } from 'react-icons/fa6';
 import {
   IoLogoGithub,
-  IoLogoLinkedin,
   IoLogoInstagram,
+  IoLogoLinkedin,
   IoLogoYoutube,
-  IoLogoTwitter,
 } from 'react-icons/io5';
-import { BioSection, BioYear } from '../components/BioSection';
-import Section from '../components/Section';
 import Paragraph from '../components/Paragraph';
-import timeline from '../constants/timeline';
+import Section from '../components/Section';
 import {
   githubUrl,
   instagramUrl,
@@ -32,48 +28,12 @@ import {
 
 const Home: React.FC = () => (
   <Container maxW="full">
-    {/* <Box
-      display={{ md: 'flex' }}
-      alignItems="center"
-      my="8"
-      pb="8"
-      borderBottom={`1px solid ${useColorModeValue('#00000020', '#ffffff20')}`}
-    > */}
-    {/* Hiding the Profile Header for now */}
-    {/* <Box
-        flexShrink={0}
-        mt={{ base: 4, md: 0 }}
-        mr={{ md: 6 }}
-        mb="4"
-        textAlign="center"
-      >
-        <Image
-          borderColor="whiteAlpha.800"
-          borderWidth={2}
-          borderStyle="solid"
-          maxWidth="100px"
-          display="inline-block"
-          objectFit="cover"
-          objectPosition="0 0"
-          borderRadius="3xl"
-          src="/me.jpg"
-          alt="Profile image"
-        />
-      </Box>
-      <Box flexGrow={1} textAlign={['center', 'start']}>
-        <Heading as="h2" variant="page-title">
-          Fabs
-        </Heading>
-        <p>Software Engineer (JavaScript / React / Node.JS / Design)</p>
-      </Box>
-    </Box> */}
-
     <Section delay="0.1">
       <Heading as="h3" variant="section-title" fontSize="3xl" mt="8">
         Hello!
       </Heading>
       <Paragraph>
-        I&apos;m Fabrício (but you can call me Fabs). I am a software engineer
+        I&apos;m Fabrício (but you can call me Fab). I am a software engineer
         focused on frontend development. Since I&apos;ve started coding,
         I&apos;ve found my passion with the <b>JavaScript</b> and <b>React</b>{' '}
         world.
@@ -99,21 +59,6 @@ const Home: React.FC = () => (
         </NextLink>
       </Box>
     </Section>
-
-    {/* Hiding the work timeline for now */}
-    {/* <Section delay="0.2">
-      <Heading as="h3" variant="section-title">
-        My journey
-      </Heading>
-
-      {timeline.map((item, idx) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <BioSection key={idx}>
-          <BioYear>{item.year}</BioYear>
-          {item.description}
-        </BioSection>
-      ))}
-    </Section> */}
 
     <Section delay="0.3">
       <Heading as="h3" variant="section-title">
@@ -164,7 +109,7 @@ const Home: React.FC = () => (
           <Button
             variant="link"
             colorScheme="blue"
-            leftIcon={<Icon as={IoLogoTwitter} />}
+            leftIcon={<Icon as={FaXTwitter} />}
           >
             @fabsmont
           </Button>

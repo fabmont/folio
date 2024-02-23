@@ -6,12 +6,12 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
+import fs from 'fs';
+import matter from 'gray-matter';
 import { GetStaticPropsResult } from 'next';
 import Head from 'next/head';
 import NextLink from 'next/link';
-import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
 
 import Section from '../../components/Section';
 
@@ -104,6 +104,15 @@ const Blog: React.FC<StaticProps> = ({ posts }) => (
             </Box>
           </NextLink>
         ))}
+
+        {!posts.length && (
+          <Text>
+            No posts available. Sorry{' '}
+            <span role="img" aria-label="sad emoji">
+              🙁
+            </span>
+          </Text>
+        )}
       </Section>
     </Box>
   </Container>

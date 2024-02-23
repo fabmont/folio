@@ -1,3 +1,4 @@
+import { ChevronRightIcon } from '@chakra-ui/icons';
 import {
   Box,
   Breadcrumb,
@@ -11,16 +12,16 @@ import {
   theme,
   useColorModeValue,
 } from '@chakra-ui/react';
+import fs from 'fs';
+import matter from 'gray-matter';
+import { marked } from 'marked';
 import { GetStaticPathsResult, GetStaticPropsResult } from 'next';
 import Head from 'next/head';
 import NextLink from 'next/link';
-import fs from 'fs';
 import path from 'path';
-import { ChevronRightIcon } from '@chakra-ui/icons';
-import matter from 'gray-matter';
-import { marked } from 'marked';
 
 import Section from '../../components/Section';
+import { contentReadingTimeCalculation } from '../../utils/contentReadingTimeCalculation';
 import PostBody from './[slug].styles';
 
 interface StaticPaths {
@@ -161,7 +162,15 @@ const BlogPost: React.FC<BlogPostProps> = (props) => {
           </Heading>
 
           <Text opacity={0.6} my="2">
-            {author}&nbsp;&nbsp;•&nbsp;&nbsp;{date}
+            {author}
+            <br />
+            <Text as="span" fontSize="xs">
+              Posted on {date}
+            </Text>
+            &nbsp;•&nbsp;
+            <Text as="span" fontSize="xs">
+              {contentReadingTimeCalculation(content)} min read
+            </Text>
           </Text>
 
           <Text>{subtitle}</Text>
