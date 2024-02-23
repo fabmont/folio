@@ -16,15 +16,8 @@ export default class MyDocument extends Document {
     ctx: DocumentContext,
   ): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
 
     try {
-      ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
-        });
-
       const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,

@@ -95,7 +95,7 @@ const Blog: React.FC<StaticProps> = ({ posts }) => (
                   by {author} • {date}
                 </Text>
                 <Text>{subtitle}</Text>
-                <Box align="end">
+                <Box alignItems="end">
                   <Button colorScheme="blue" variant="link">
                     Read more
                   </Button>

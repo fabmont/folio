@@ -47,7 +47,7 @@ const Home: React.FC = () => (
         play my favorite songs on the guitar, and also I am always reading about
         what&apos;s new in the tech world to be as much updated as I can.
       </Paragraph>
-      <Box align="center" my={4}>
+      <Box alignItems="center" my={4}>
         <NextLink href="/work">
           <Button
             rightIcon={<ChevronRightIcon />}

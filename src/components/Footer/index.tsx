@@ -17,13 +17,11 @@ import {
   twitterUrl,
   youtubeUrl,
 } from '../../constants/social-networks';
-import NowPlaying from '../NowPlaying';
 
 const Footer: React.FC = () => (
   <>
     <Divider borderColor={useColorModeValue('gray.400', 'gray.600')} mt="14" />
     <Box w="100%" px={['4', '16']} pt="4" pb="64px">
-      <NowPlaying />
       <SimpleGrid
         justifyContent="flex-start"
         textAlign="left"

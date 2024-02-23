@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 interface LinkProps {
   activeClassName?: string;
@@ -8,13 +8,13 @@ interface LinkProps {
   href: string;
 }
 
-const CustomLink: React.FC<LinkProps> = ({
+const CustomLink = ({
   children,
   activeClassName = '',
   className = '',
   href,
   ...props
-}) => {
+}: React.PropsWithChildren<LinkProps>) => {
   const { asPath } = useRouter();
 
   const childClassName =

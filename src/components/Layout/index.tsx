@@ -1,10 +1,13 @@
+import { Box, Container } from '@chakra-ui/react';
 import Head from 'next/head';
 import { NextRouter } from 'next/router';
-import { Box, Container } from '@chakra-ui/react';
-import Header from '../Header';
 import Footer from '../Footer';
+import Header from '../Header';
 
-const Layout: React.FC<{ router: NextRouter }> = ({ children, router }) => (
+const Layout = ({
+  children,
+  router,
+}: React.PropsWithChildren<{ router: NextRouter }>) => (
   <Box as="main" minH="100%">
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />

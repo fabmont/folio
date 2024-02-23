@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
+import { Box, Container, Heading, Link, Text } from '@chakra-ui/react';
 import Head from 'next/head';
-import { Box, Text, Container, Link, Heading, Badge } from '@chakra-ui/react';
 
 import Section from '../components/Section';
 import workList from '../constants/workList';
