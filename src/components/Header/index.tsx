@@ -1,27 +1,33 @@
-import NextLink from 'next/link';
-import {
-  Container,
-  Box,
-  Link,
-  Stack,
-  Heading,
-  Flex,
-  Menu,
-  MenuList,
-  IconButton,
-  MenuButton,
-  useColorModeValue,
-  Button,
-  Text,
-} from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Heading,
+  IconButton,
+  Link,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Stack,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
+import NextLink from 'next/link';
 import ThemeToggleButton from '../ThemeToggleButton';
 
-const LinkItem: React.FC<{
+const LinkItem = ({
+  href,
+  path,
+  children,
+  ...props
+}: React.PropsWithChildren<{
   href: string;
   path: string;
   _target?: string;
-}> = ({ href, path, children, ...props }) => {
+}>) => {
   const active = path === href;
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900');
   return (
@@ -60,9 +66,9 @@ const Navbar: React.FC<{ path: string }> = (props) => {
         display="flex"
         p={2}
         maxW="container.md"
-        wrap="wrap"
-        align="center"
-        justify="space-between"
+        flexWrap="wrap"
+        alignItems="center"
+        justifyContent="space-between"
       >
         <Flex align="center" mr={5}>
           <NextLink href="/" passHref>
@@ -95,7 +101,7 @@ const Navbar: React.FC<{ path: string }> = (props) => {
           </LinkItem>
         </Stack>
 
-        <Box flex={1} align="right">
+        <Box display="flex" flex={1} justifyContent="right">
           <ThemeToggleButton />
 
           <Box ml={4} display={{ base: 'inline-block', md: 'none' }}>
@@ -107,9 +113,15 @@ const Navbar: React.FC<{ path: string }> = (props) => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/">Home</NextLink>
-                <NextLink href="/work">Work</NextLink>
-                <NextLink href="/blog">Blog</NextLink>
+                <NextLink href="/">
+                  <MenuItem>Home</MenuItem>
+                </NextLink>
+                <NextLink href="/work">
+                  <MenuItem>Work</MenuItem>
+                </NextLink>
+                <NextLink href="/blog">
+                  <MenuItem>Blog</MenuItem>
+                </NextLink>
               </MenuList>
             </Menu>
           </Box>
