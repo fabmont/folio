@@ -1,12 +1,12 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react';
-import { SunIcon, MoonIcon } from '@chakra-ui/icons';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const ThemeToggleButton: React.FC = () => {
   const { toggleColorMode } = useColorMode();
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
+    <AnimatePresence mode="wait" initial={false}>
       <motion.div
         style={{ display: 'inline-block' }}
         key={useColorModeValue('light', 'dark')}
