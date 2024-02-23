@@ -1,6 +1,3 @@
-import { Link, ListItem, UnorderedList } from '@chakra-ui/react';
-import Paragraph from '../components/Paragraph';
-
 const workList = [
   {
     url: 'https://coopersystem.com.br',
@@ -25,7 +22,7 @@ const workList = [
   },
   {
     url: 'https://cornershopapp.com',
-    title: 'Cornershop by Uber',
+    title: 'Uber Groceries',
     role: 'Software Engineer, Frontend',
     date: 'Apr 2021 – May 2022',
     technologies: ['JavaScript', 'TypeScript', 'ReactJS', 'Storybook'],
