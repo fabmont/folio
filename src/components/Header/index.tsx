@@ -35,12 +35,31 @@ const LinkItem = ({
       as={NextLink}
       href={href}
       p={2}
-      bg={active ? useColorModeValue('#dbdbc8', 'gray.700') : undefined}
+      // bg={active ? useColorModeValue('#e2e2e2', 'gray.700') : undefined}
       color={active ? 'unset' : inactiveColor}
       borderRadius="lg"
+      position="relative"
       {...props}
     >
       {children}
+
+      {active && (
+        <Flex
+          position="absolute"
+          w="100%"
+          bottom="0"
+          left="0"
+          align="center"
+          justify="center"
+        >
+          <Box
+            h="3px"
+            w="10px"
+            borderRadius="full"
+            bg={useColorModeValue('gray.600', 'gray.300')}
+          />
+        </Flex>
+      )}
     </Link>
   );
 };
@@ -54,7 +73,7 @@ const Navbar: React.FC<{ path: string }> = (props) => {
       top={0}
       as="nav"
       w="100%"
-      bg={useColorModeValue('#dfdfcd82', '#27272b80')}
+      bg={useColorModeValue('#e2e2e282', '#27272b80')}
       style={{
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',

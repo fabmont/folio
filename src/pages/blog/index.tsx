@@ -85,7 +85,7 @@ const Blog: React.FC<StaticProps> = ({ posts }) => (
             >
               <Box
                 p="4"
-                background={useColorModeValue('#fffff1', '#28282b')}
+                background={useColorModeValue('#ffffff', '#28282b')}
                 borderRadius="md"
               >
                 <Text fontSize="2xl" fontWeight="bold">

@@ -21,7 +21,12 @@ const Work: React.FC = () => (
             {item.role}
           </Text>
           <Text>
-            <Link href={item.url} target="blank" rel="noopener noreferrer">
+            <Link
+              href={item.url}
+              color="gray.800"
+              target="blank"
+              rel="noopener noreferrer"
+            >
               <Text as="span" fontWeight="bold">
                 {item.title}
               </Text>

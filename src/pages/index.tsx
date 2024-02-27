@@ -71,32 +71,32 @@ const Home: React.FC = () => (
       </Heading>
       <Flex gap="4">
         <Link href={githubUrl} target="_blank">
-          <IconButton variant="link" aria-label="github" colorScheme="blue">
-            <Icon as={IoLogoGithub} />
+          <IconButton variant="link" aria-label="github" colorScheme="gray">
+            <Icon as={IoLogoGithub} fontSize="24px" />
           </IconButton>
         </Link>
 
         <Link href={linkedinUrl} target="_blank">
-          <IconButton variant="link" colorScheme="blue" aria-label="linkedin">
-            <Icon as={IoLogoLinkedin} />
+          <IconButton variant="link" colorScheme="gray" aria-label="linkedin">
+            <Icon as={IoLogoLinkedin} fontSize="24px" />
           </IconButton>
         </Link>
 
         <Link href={instagramUrl} target="_blank">
-          <IconButton variant="link" colorScheme="blue" aria-label="instagram">
-            <Icon as={IoLogoInstagram} />
+          <IconButton variant="link" colorScheme="gray" aria-label="instagram">
+            <Icon as={IoLogoInstagram} fontSize="24px" />
           </IconButton>
         </Link>
 
         <Link href={youtubeUrl} target="_blank">
-          <IconButton variant="link" colorScheme="blue" aria-label="youtube">
-            <Icon as={IoLogoYoutube} />
+          <IconButton variant="link" colorScheme="gray" aria-label="youtube">
+            <Icon as={IoLogoYoutube} fontSize="24px" />
           </IconButton>
         </Link>
 
         <Link href={twitterUrl} target="_blank">
-          <IconButton variant="link" colorScheme="blue" aria-label="twitter">
-            <Icon as={FaXTwitter} />
+          <IconButton variant="link" colorScheme="gray" aria-label="twitter">
+            <Icon as={FaXTwitter} fontSize="24px" />
           </IconButton>
         </Link>
       </Flex>
