@@ -4,10 +4,11 @@ import {
   Box,
   Button,
   Container,
+  Flex,
   Heading,
   Icon,
+  IconButton,
   Link,
-  SimpleGrid,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { FaXTwitter } from 'react-icons/fa6';
@@ -68,57 +69,37 @@ const Home: React.FC = () => (
       <Heading as="h3" variant="section-title">
         Reach me!
       </Heading>
-      <SimpleGrid columns={[1, 2, 3]} spacing={['4', '2']}>
+      <Flex gap="4">
         <Link href={githubUrl} target="_blank">
-          <Button
-            variant="link"
-            colorScheme="blue"
-            leftIcon={<Icon as={IoLogoGithub} />}
-          >
-            @fabmont
-          </Button>
+          <IconButton variant="link" aria-label="github" colorScheme="blue">
+            <Icon as={IoLogoGithub} />
+          </IconButton>
         </Link>
 
         <Link href={linkedinUrl} target="_blank">
-          <Button
-            variant="link"
-            colorScheme="blue"
-            leftIcon={<Icon as={IoLogoLinkedin} />}
-          >
-            Fabrício Monteiro
-          </Button>
+          <IconButton variant="link" colorScheme="blue" aria-label="linkedin">
+            <Icon as={IoLogoLinkedin} />
+          </IconButton>
         </Link>
 
         <Link href={instagramUrl} target="_blank">
-          <Button
-            variant="link"
-            colorScheme="blue"
-            leftIcon={<Icon as={IoLogoInstagram} />}
-          >
-            @fab_mont
-          </Button>
+          <IconButton variant="link" colorScheme="blue" aria-label="instagram">
+            <Icon as={IoLogoInstagram} />
+          </IconButton>
         </Link>
 
         <Link href={youtubeUrl} target="_blank">
-          <Button
-            variant="link"
-            colorScheme="blue"
-            leftIcon={<Icon as={IoLogoYoutube} />}
-          >
-            Fabrício Monteiro
-          </Button>
+          <IconButton variant="link" colorScheme="blue" aria-label="youtube">
+            <Icon as={IoLogoYoutube} />
+          </IconButton>
         </Link>
 
         <Link href={twitterUrl} target="_blank">
-          <Button
-            variant="link"
-            colorScheme="blue"
-            leftIcon={<Icon as={FaXTwitter} />}
-          >
-            @fabsmont
-          </Button>
+          <IconButton variant="link" colorScheme="blue" aria-label="twitter">
+            <Icon as={FaXTwitter} />
+          </IconButton>
         </Link>
-      </SimpleGrid>
+      </Flex>
     </Section>
   </Container>
 );
