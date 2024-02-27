@@ -1,5 +1,6 @@
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import {
+  Avatar,
   Box,
   Button,
   Container,
@@ -29,6 +30,7 @@ import {
 const Home: React.FC = () => (
   <Container maxW="full">
     <Section delay="0.1">
+      <Avatar src="/me2.png" size="lg" borderRadius="lg" mt="8" />
       <Heading as="h3" variant="section-title" fontSize="3xl" mt="8">
         Hello!
       </Heading>
@@ -40,19 +42,21 @@ const Home: React.FC = () => (
       </Paragraph>
       <Paragraph>
         I&apos;ve already worked for small and big companies, which gave me lots
-        of experience on a bunch types of situations.
+        of experience on a bunch types of situations. Currently I have been
+        working in early stage tech startups, which is a great experience to
+        learn and grow.
       </Paragraph>
       <Paragraph>
         I love to spend some time with my family, watch some movies/tv shows,
-        play my favorite songs on the guitar, and also I am always reading about
-        what&apos;s new in the tech world to be as much updated as I can.
+        play my favorite songs on the guitar.
       </Paragraph>
-      <Box alignItems="center" my={4}>
+      <Box display="flex" justifyContent="center" my={4}>
         <NextLink href="/work">
           <Button
             rightIcon={<ChevronRightIcon />}
             colorScheme="blue"
             variant="outline"
+            size="xs"
           >
             Check my work
           </Button>
