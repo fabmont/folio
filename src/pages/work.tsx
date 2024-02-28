@@ -1,5 +1,12 @@
 /* eslint-disable react/no-array-index-key */
-import { Box, Container, Heading, Link, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Container,
+  Heading,
+  Link,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import Head from 'next/head';
 
 import Section from '../components/Section';
@@ -23,7 +30,7 @@ const Work: React.FC = () => (
           <Text>
             <Link
               href={item.url}
-              color="gray.800"
+              color={useColorModeValue('gray.800', 'gray.400')}
               target="blank"
               rel="noopener noreferrer"
             >

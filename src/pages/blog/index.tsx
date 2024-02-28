@@ -88,7 +88,11 @@ const Blog: React.FC<StaticProps> = ({ posts }) => (
                 background={useColorModeValue('#ffffff', '#28282b')}
                 borderRadius="md"
               >
-                <Text fontSize="2xl" fontWeight="bold">
+                <Text
+                  fontSize="2xl"
+                  fontWeight="bold"
+                  fontFamily="Space Grotesk"
+                >
                   {title}
                 </Text>
                 <Text opacity={0.6} fontSize="sm" mb="2">
